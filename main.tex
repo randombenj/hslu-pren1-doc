@@ -1,0 +1,72 @@
+% Load the main ipa class
+\documentclass[oneside]{modern}
+
+% Define the author
+\title{Linux on Z}
+\author{Benjamin Fassbind und Felix Niederberger}
+\date{\today}
+
+\begin{document}
+   
+   % magic * chapter starts at 1 :) 
+   \renewcommand{\thesection}{\arabic{section}}
+
+  % Print whole bibliographie
+  \nocite{*}
+
+  \firstpage
+    {Was unterscheidet Linux on z zu einem Linux auf x86}
+    {Mainframe Topics}
+    {\theauthor}
+
+  \addtableofcontents
+
+  \newpage
+  
+  \section*{Aufgabenstellung}
+  \addcontentsline{toc}
+    {section}
+    {Aufgabenstellung}
+  \subfile{aufgabenstellung}
+  
+  %\chapter{Kapitel 1}
+  
+  \section{Die x86 CPU Architektur}
+  \subfile{x86-architecture}
+  \section{Die Mainframe Architektur}
+  \section{Linux}
+  \subfile{linux}
+  \section{Linux on IBM}
+  \subsection{History}
+  % https://www.radiotux.de/index.php?/archives/540-RadioTux-Sendung-Januar-2009.html
+  \subsection{Products}
+  \section{Unterschiede}
+  \section{Fazit}
+
+  \subfile{glossary.tex}
+
+  % ------------------------------------------------------------------------------
+  % Assemble the document with the multiple parts
+
+  %\subfile{0-typographic-elements.tex}
+
+
+  %\section{Glossar}
+  %\chapter{Glossaries}
+
+  \addglossary
+
+  % Literaturverzeichnis
+  \newpage
+  \addcontentsline{toc}
+    {section}
+    {Literatur}
+
+  \printbibliography[
+    heading=subbibliography
+  ]
+
+  \newpage
+  \listoffigures
+
+\end{document}
