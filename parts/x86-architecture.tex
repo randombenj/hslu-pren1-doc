@@ -1,21 +1,21 @@
-Die x86 \acrshort{cpu} Architektur basiert auf dem Intel 8086 Mikroprozessor. \cite{Wikipediax86}
+Die x86 Architektur basiert auf dem Intel 8086 Mikroprozessor. \cite{Wikipediax86}
 Der 8086 war der 16-bit Nachfolger des 8-bit 8080 Mikroprozessors.
 Der Name "x86" kommt vom 80{\it 86} Mikroprozessor und dessen Nachfolgern.
 
 \image{img/8086}
     {Der 8086 Mikroprozessor von Intel}
 
-Über die Jahre wurden zahlreiche Instruktionen hinzugefügt, die 
-Rückwärtskompatibilität wurde jedoch immer beibehalten, was den die x86 
+Über die Jahre wurden zahlreiche Instruktionen hinzugefügt, die
+Rückwärtskompatibilität wurde jedoch immer beibehalten, was den die x86
 Systeme auch so weit verbreitet hat. Einmal für x86 kompiliert läuft ein
-Binary auf jedem anderen x86 System. Unsere gesammte verteilung von 
-Software welche man vorkompiliert downloaden kann basiert auf dieser 
+Binary auf jedem anderen x86 System. Unsere gesammte verteilung von
+Software welche man vorkompiliert downloaden kann basiert auf dieser
 Rückwärtskompatibilität. Aus diesem grund basieren auch die Mehrheit aller
 Personal Computer und Server auf der x86 Architektur.
 
 
 
-Das folgende Beispiel ist ein "Hello, World" programm in x86 Assembler 
+Das folgende Beispiel ist ein "Hello, World" programm in x86 Assembler
 welches auf Linux den Syscall 1 (write) aufruft:
 
 \begin{minted}{nasm}
@@ -50,25 +50,25 @@ Eine Tabelle:
 
     % Heading
     {\bf Nummer} & {\bf Beschreibung} & {\bf Priorität} \vspace{4mm} \\
-    
+
     % Content
     A12 &
     Die produktive Version der Software wird auf einem offiziellen
     Roche Server betrieben. &
     \ok tief \\
-    
+
     A13 &
     Die Softwarekomponenten sind so konfigurierbar, dass sie auch für
     einen offiziellen Debian Paket Server\footnote{
       z.B. ftp://ftp.debian.org
     } verwendet werden können. &
     \ok tief \\
-    
+
     A14 &
     In der Suchmaske können reguläre Ausdrücke und Platzhalter
     verwendet werden. &
     \ok tief \\
-    
+
     A15 &
     Ein auf der paketspezifischen Ansicht dargestelltes Paket kann
     online entpackt und inspiziert werden. &

@@ -1,0 +1,46 @@
+
+name: CI
+
+on: [push]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+    container:
+        image: blang/latex
+
+    steps:
+      - uses: actions/checkout@v1
+      - name: build example document
+        run: |
+          echo "::set-env name=version::$(git describe --always)"
+          apt update && apt install --yes texlive-fonts-extra
+
+          # build latex document
+          lualatex -interaction=nonstopmode -halt-on-error -shell-escape main.tex
+          makeglossaries main
+          lualatex -interaction=nonstopmode -halt-on-error -shell-escape main.tex
+
+
+      - name: create release
+        id: create_release
+        uses: actions/create-release@v1.0.0
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          tag_name: ${{ env.version }}
+          release_name: ${{ env.version }}
+          draft: false
+          prerelease: true
+
+      - name: upload docs
+        uses: actions/upload-release-asset@v1.0.1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          upload_url: ${{ steps.create_release.outputs.upload_url }}
+          asset_path: main.pdf
+          asset_name: hslu-pren1.pdf
+          asset_content_type: application/pdf
+
