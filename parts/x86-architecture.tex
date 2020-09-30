@@ -41,3 +41,37 @@ _start:   mov       rax, 1                  ; system call for write
           section   .data
 message:  db        "Hello, World", 10      ; note the newline at the end
 \end{minted}
+
+
+Eine Tabelle:
+
+% Two tables because of page break
+\begin{tabularx}{\textwidth}{ >{\hsize=.3\hsize}X >{\hsize=2.4\hsize}X >{\hsize=0.3\hsize}X }
+
+    % Heading
+    {\bf Nummer} & {\bf Beschreibung} & {\bf Priorität} \vspace{4mm} \\
+    
+    % Content
+    A12 &
+    Die produktive Version der Software wird auf einem offiziellen
+    Roche Server betrieben. &
+    \ok tief \\
+    
+    A13 &
+    Die Softwarekomponenten sind so konfigurierbar, dass sie auch für
+    einen offiziellen Debian Paket Server\footnote{
+      z.B. ftp://ftp.debian.org
+    } verwendet werden können. &
+    \ok tief \\
+    
+    A14 &
+    In der Suchmaske können reguläre Ausdrücke und Platzhalter
+    verwendet werden. &
+    \ok tief \\
+    
+    A15 &
+    Ein auf der paketspezifischen Ansicht dargestelltes Paket kann
+    online entpackt und inspiziert werden. &
+    \ok tief \\
+
+\end{tabularx}
