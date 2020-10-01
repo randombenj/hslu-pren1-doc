@@ -1,10 +1,13 @@
 \documentclass[oneside]{modern}
 
-\title{PREN1}
+\title{Produktentwicklung 1}
 \author{Gruppe 5}
 \date{\today}
 
 \begin{document}
+
+   % magic * chapter starts at 1 :) 
+   \renewcommand{\thesection}{\arabic{section}}
 
   % Print whole bibliographie
   \nocite{*}
@@ -25,12 +28,9 @@
 
   \subfile{parts/0-doc-info}
   \subfile{parts/1-aufgabenstellung}
-  \subfile{parts/x86-architecture}
+  \subfile{parts/2-vorgehen}
 
-  
-  \chapter{Glossaries}
-  \section{Glossar}
-
+  \newpage
   \addglossary
 
   % Literaturverzeichnis

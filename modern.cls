@@ -47,7 +47,7 @@
 ]{xcolor}    % Define colors in the document
 \RequirePackage{anyfontsize}
 \RequirePackage{caption}
-\RequirePackage[english]
+\RequirePackage[german]
   {babel}
 
 \RequirePackage{minted}   % Syntax highlighting
@@ -211,7 +211,7 @@
 \renewcommand{\headrulewidth}{0pt}
 
 \rhead{
-  \bf\small\leftmark
+  \bf\small\nouppercase\rightmark
 }
 
 % The footer shows the title, the author and the page [page]/[total pages]
@@ -372,7 +372,7 @@
 
 \newcommand{\infoTile}[1]
 	{
-		\tile{green2-light}
+		\tile{light-grey}
 			{#1}
 	}
 
