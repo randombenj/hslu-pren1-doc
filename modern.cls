@@ -209,6 +209,8 @@
 \fancyhf{}
 % remove the header line
 \renewcommand{\headrulewidth}{0pt}
+% remove numbering in section in the rightmark
+\renewcommand{\sectionmark}[1]{\markright{#1}{}}
 
 \rhead{
   \bf\small\nouppercase\rightmark
