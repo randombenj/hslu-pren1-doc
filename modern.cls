@@ -82,7 +82,7 @@
   \selectfont
 }
 
-\RequirePackage{xtab}
+%RequirePackage{xtab}
 
 \RequirePackage{wrapfig}
 \RequirePackage[backend=bibtex]{biblatex}
@@ -113,8 +113,6 @@
 \setmainfont{SourceSerifPro} % sets the roman font
 \setsansfont{TEX Gyre Adventor} % sets the sans font
 \setmonofont{Anonymous Pro} % sets the monospace font
-
-\renewcommand{\bfseries}{\sourceserifprosemibold}
 
 % ------------------------------------------------------------------------------
 % DOCUMENT PAGE SIZE
@@ -380,7 +378,7 @@
 
 \newcommand{\infoTile}[1]
 	{
-		\tile{light-grey}
+		\tile{light-gray}
 			{#1}
 	}
 
