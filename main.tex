@@ -8,6 +8,8 @@
 
    % magic * chapter starts at 1 :) 
    \renewcommand{\thesection}{\arabic{section}}
+   % also break urls
+   %\PassOptionsToPackage{hyphens}{url}\usepackage{hyperref}
 
   % Print whole bibliographie
   \nocite{*}
@@ -29,6 +31,7 @@
   \subfile{parts/0-doc-info}
   \subfile{parts/1-aufgabenstellung}
   \subfile{parts/2-vorgehen}
+  \subfile{parts/3-technologierecherche}
 
   \newpage
   \addglossary

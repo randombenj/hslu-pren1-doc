@@ -1,5 +1,5 @@
 # use -shell-escape for syntax highlight
-$lualatex = 'pdflatex -interaction=nonstopmode -shell-escape';
+$lualatex = 'lualatex -interaction=nonstopmode -shell-escape';
 
 # build the glossaries
 add_cus_dep('glo', 'gls', 0, 'makeglo2gls');

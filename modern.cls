@@ -82,6 +82,8 @@
   \selectfont
 }
 
+\RequirePackage{xtab}
+
 \RequirePackage{wrapfig}
 \RequirePackage[backend=bibtex]{biblatex}
   \addbibresource{references.bib}
@@ -96,9 +98,9 @@
 }
 % ----------
 % FONT SETUP
-\RequirePackage[T1]{fontenc}
+\RequirePackage{fontspec}
 % set main font to Source Serif Pro (https://www.tug.org/FontCatalogue/sourceserifproregular/)
-\RequirePackage[default,light,black]{sourceserifpro}
+\RequirePackage[default,light,semibold]{sourceserifpro}
 % set sans serif font to Gyre Adventor (https://tug.org/FontCatalogue/texgyreadventor/)
 \RequirePackage{tgadventor} % defines '\sfdefault'
 %  monofont Droid Sans Mono (https://tug.org/FontCatalogue/droidsansmono/)
@@ -106,14 +108,18 @@
 %\RequirePackage[defaultmono]{droidmono} % defines '\ttdefault'
 \RequirePackage{tgheros} % mainfont and '\rmdefault'
 
-%\setmainfont{SourceSerifPro} % sets the roman font
-%\setsansfont{TEX Gyre Adventor} % sets the sans font
-%\setmonofont{Anonymous Pro} % sets the monospace font
+\RequirePackage[T1]{fontenc}
+
+\setmainfont{SourceSerifPro} % sets the roman font
+\setsansfont{TEX Gyre Adventor} % sets the sans font
+\setmonofont{Anonymous Pro} % sets the monospace font
+
+\renewcommand{\bfseries}{\sourceserifprosemibold}
 
 % ------------------------------------------------------------------------------
 % DOCUMENT PAGE SIZE
 
-\selectlanguage{English}
+\selectlanguage{German}
 \geometry{
   a4paper,
   left = 25mm,
@@ -519,7 +525,7 @@
 % Title TOC format
 \titlecontents{section}
   [3mm]                     % left margin
-  {}                        % above code
+  {\vspace{1mm}}                        % above code
   {
     \thecontentslabel
     \hspace{2mm}
@@ -528,7 +534,7 @@
   {                         % filler-page-format, (nothing)
     \titlerule*[0mm]{}
     \contentspage
-  }[\vspace{0mm}]           % below code
+  }[\vspace{1mm}]           % below code
 
 
 \titleformat{\subsection}
@@ -549,7 +555,7 @@
   {                         % filler-page-format, (nothing)
     \titlerule*[0mm]{}
     \contentspage
-  }[\vspace{2mm}]           % below code
+  }[\vspace{1mm}]           % below code
 
 \titleformat{\subsubsection}
   {\sf\large}      % Font style
