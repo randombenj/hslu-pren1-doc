@@ -24,6 +24,7 @@
 \RequirePackage[newparttoc]{titlesec} % Package to redefine the title
 \RequirePackage{titletoc} % Package to style the table of contents$
 \RequirePackage{afterpage}
+\RequirePackage{longtable}
 \RequirePackage[
   a4paper,
   left = 25mm,
@@ -82,7 +83,7 @@
   \selectfont
 }
 
-%RequirePackage{xtab}
+%\RequirePackage{xtab}
 
 \RequirePackage{wrapfig}
 \RequirePackage[backend=bibtex]{biblatex}
@@ -100,7 +101,7 @@
 % FONT SETUP
 \RequirePackage{fontspec}
 % set main font to Source Serif Pro (https://www.tug.org/FontCatalogue/sourceserifproregular/)
-\RequirePackage[default,light,semibold]{sourceserifpro}
+%\RequirePackage[default,light,semibold]{sourceserifpro}
 % set sans serif font to Gyre Adventor (https://tug.org/FontCatalogue/texgyreadventor/)
 \RequirePackage{tgadventor} % defines '\sfdefault'
 %  monofont Droid Sans Mono (https://tug.org/FontCatalogue/droidsansmono/)
@@ -110,10 +111,11 @@
 
 \RequirePackage[T1]{fontenc}
 
-\setmainfont{SourceSerifPro} % sets the roman font
+%\setmainfont{SourceSerifPro} % sets the roman font
 \setsansfont{TEX Gyre Adventor} % sets the sans font
 \setmonofont{Anonymous Pro} % sets the monospace font
 
+\RequirePackage{url}
 % ------------------------------------------------------------------------------
 % DOCUMENT PAGE SIZE
 
@@ -225,7 +227,7 @@
   \small{\docdate}
 }
 \cfoot{
-  \small{\docauthor}
+  \small{Gruppe 5}
 }
 \rfoot{
   \small{
@@ -253,7 +255,7 @@
     \small{\docdate}
   }
   \cfoot{
-    \small{\docauthor}
+    \small{Gruppe 5}
   }
   \rfoot{
     \small{
@@ -316,6 +318,36 @@
     }
   }
 }
+
+% ------------------------------------------------------------------------------
+% TABLE
+
+\definecolor{table-rule-color}{HTML}{999999}
+\definecolor{table-row-color}{HTML}{F5F5F5}
+\definecolor{thead-row-color}{HTML}{FFFFFF}
+\definecolor{white}{HTML}{FFFFFF}
+
+% Border Color
+\arrayrulecolor{white}
+
+\renewcommand*{\arraystretch}{1.4}
+%\renewcommand*{\midrule}{}
+
+% Reset rownum counter so that each table
+% starts with the same row colors.
+% https://tex.stackexchange.com/questions/170637/restarting-rowcolors
+\let\oldlongtable\longtable
+\let\endoldlongtable\endlongtable
+\renewenvironment{longtable}{
+\rowcolors{3}{}{table-row-color!100}  % row color
+\oldlongtable
+} {
+\endoldlongtable
+\global\rownum=0\relax
+}
+
+\let\oldtoprule\toprule
+%\renewcommand*{\toprule}{\oldtoprule\rowcolor{thead-row-color}}
 
 % ----------
 % info tiles
@@ -398,7 +430,7 @@
 
   {\LARGE\sf{#2}\newline}
 
-  {\Large\sf{#3}\newline}
+  {\large{#3}\newline}
 
   \vspace{2cm}
 

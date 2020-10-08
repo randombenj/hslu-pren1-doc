@@ -1,7 +1,14 @@
 \documentclass[oneside]{modern}
 
 \title{Produktentwicklung 1}
-\author{Gruppe 5}
+\author{
+  Burch Sven <sven.burch@stud.hslu.ch> \\
+  Fassbind Benjamin <benjamin.fassbind@stud.hslu.ch> \\
+  Meier Boas <boas.meier@stud.hslu.ch> \\
+  Paradiso Simone <simone.paradiso@stud.hslu.ch> \\
+  Jacob Yves <yves.jacob@stud.hslu.ch> \\
+  Roos Yannick <yannick.roos@stud.hslu.ch>
+}
 \date{\today}
 
 \begin{document}
@@ -9,13 +16,19 @@
    % magic * chapter starts at 1 :) 
    \renewcommand{\thesection}{\arabic{section}}
    % also break urls
+   \makeatletter
+   \g@addto@macro{\UrlBreaks}{\UrlOrds}
+   \makeatother
+   
+   %\textcolor{light-gray}{\rule{\linewidth}{1pt}}
+
    %\PassOptionsToPackage{hyphens}{url}\usepackage{hyperref}
 
   % Print whole bibliographie
   \nocite{*}
 
   \firstpage
-    {Treppenrobotter}
+    {Autonomer Baugerüst-Roboter}
     {Hochschule Luzern}
     {\theauthor}
 
