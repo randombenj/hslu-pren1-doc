@@ -326,6 +326,7 @@
 \definecolor{table-row-color}{HTML}{F5F5F5}
 \definecolor{thead-row-color}{HTML}{FFFFFF}
 \definecolor{white}{HTML}{FFFFFF}
+\definecolor{red}{HTML}{FFBEAB}
 
 % Border Color
 \arrayrulecolor{white}
@@ -430,7 +431,7 @@
 
   {\LARGE\sf{#2}\newline}
 
-  {\large{#3}\newline}
+  {\normalsize{#3}\newline}
 
   \vspace{2cm}
 
