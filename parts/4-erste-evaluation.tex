@@ -1,6 +1,6 @@
 \section{Erste Evaluation}
 
-Für den ersten Evaluationsschritt werden Killerkriterien formuliert. Diese Killerkriterien sind aus der Anforderungsliste und der Aufgabestellung abgeleitet. Es soll eine Erstevaluation gemacht werden, um die vielen recherchierten Lösungsmöglichkeiten einzugrenzen. Die verbleibenden, möglichen Teillösungen werden anschliessend in einem morphologischen Kasten zusammengetragen. Mit dem morphologischen Kasten werden die Teillösungen zu mehreren Gesamtlösungen kombiniert. Diese Gesamtlösungen werden dann in einem zweiten Evaluationsschritt mit einer Nutzwertanalyse gefolgt von einer Sensitivitätsanalyse bewertet. Die Sensitivitätsanalyse dient dazu, mit variabler Gewichtung der Kriterien die Ergebnisse der Nutzwertanalyse zu prüfen.
+Für den ersten Evaluationsschritt werden Killerkriterien formuliert. Diese Killerkriterien sind aus der Anforderungsliste und der Aufgabestellung abgeleitet. Es soll eine Erstevaluation gemacht werden, um die vielen recherchierten Lösungsmöglichkeiten einzugrenzen. Die verbleibenden, möglichen Teillösungen werden anschliessend in einem morphologischen Kasten zusammengetragen. Mit dem morphologischen Kasten werden die Teillösungen zu mehreren Gesamtlösungen kombiniert. Diese Gesamtlösungen werden dann in einem zweiten Evaluationsschritt mit einer Nutzwertanalyse bewertet.
 
 \subsection{Mechanisch}
 \textbf{Killerkriterien}
@@ -8,11 +8,13 @@ Für den ersten Evaluationsschritt werden Killerkriterien formuliert. Diese Kill
 	\item Gerät funktioniert bei jeder Witterung. Gerät darf nicht von Wind und Regen beeinflusst werden.
 	\item Das ganze Gerät muss sich auf dem Zielpodest (Podest am oberen Ende der Treppe) befinden.
 	\item Die Treppenstufen sind aus Holz oder Aluminium (nicht magnetisch).
+	\item Die Hindernisse liegen zufällig flach oder hochkant verteilt auf der Treppe.
+	\item Aufgrund des vierten Killerkriteriums muss auf einem Treppentritt nach rechts oder links ausgewichen werden können.
 \end{enumerate}
 
 \textbf{Ausgeschiedene Teilfunktionen}
 
-\begin{longtable}[h]{l|l|l}
+\begin{longtable}[h]{l p{7cm} l}
 %\toprule
 \textbf{Fortbewegung} & \textbf{Treppensteigen} & \textbf{Lenkung} 
 \tabularnewline
@@ -20,36 +22,58 @@ Für den ersten Evaluationsschritt werden Killerkriterien formuliert. Diese Kill
 \endhead
 Normale Räder & Spezielle Treppenräder & Lenkachse 
 \tabularnewline
-Omnidrive – Allseitenräder & Hebemechanismus: 3-Teilig & Knicklenkung 
+Omnidrive–Allseitenräder & Hebemechanismus: 3-Teilig & Knicklenkung 
 \tabularnewline
-Omnidrive – Mecanumräder & Hebemechanismus: Raufkappen & Panzerlenkung 
+Omnidrive–Mecanumräder & Hebemechanismus: Raufkappen & Panzerlenkung 
 \tabularnewline
-Omnidrive – Fahrdrehmodul & Hebemechanismus: Aufstapeln und Ausfahren & Roomba - Prinzip 
+Omnidrive–Fahrdrehmodul & Hebemechanismus: Aufstapeln und Ausfahren & Roomba-Prinzip 
 \tabularnewline
-\cellcolor{red} Propeller – Rotoren & \cellcolor{red} Katapult & 
+\cellcolor{red}Propeller,Rotoren & \cellcolor{red}Katapult & 
 \tabularnewline
 Beine & Sprungfeder &
 \tabularnewline
- & \cellcolor{red} Bahn über Treppe ausfahren für kleines Fahrzeug & 
+ & \cellcolor{red}Bahn über Treppe ausfahren für kleines Fahrzeug & 
 \tabularnewline
- & \cellcolor{red} Schlange mit Magneten & 
+ & \cellcolor{red}Schlange mit Magneten & 
+\end{longtable}
+
+\begin{longtable}[h]{l p{7cm} l}
+%\toprule
+\textbf{Hindernisse überwinden} 
+\tabularnewline
+%\midrule
+\endhead
+Umgehen
+\tabularnewline
+\cellcolor{red}Überfahren
+\tabularnewline
+\cellcolor{red}Überfliegen
+\tabularnewline
+\cellcolor{red}Besteigen
 \end{longtable}
 
 Teilfunktion Fortbewegung:
 \begin{itemize}
-    \item Propeller – Rotoren scheiden aufgrund des 1. Killerkriteriums aus. Ein Flug ist wegen der ungewissen Witterung problematisch. Sollte es am Wettkampftag regnen und winden, so wird es schwierig für eine Drohne auf dem Kurs zu bleiben und sich auf dem Zielpodest richtig, beim Zielpiktogramm zu platzieren. Aus diesem Grund wird diese Teillösung nicht weiter in Betracht gezogen.
-\end{itemize}
+    \item Propeller und Rotoren scheiden aufgrund des ersten Killerkriteriums aus. Ein Flug ist wegen der ungewissen Witterung problematisch. Sollte es am Wettkampftag regnen und winden, so wird es schwierig für eine Drohne auf dem Kurs zu bleiben und sich auf dem Zielpodest richtig, beim Zielpiktogramm zu platzieren. Aus diesem Grund wird diese Teillösung nicht weiter in Betracht gezogen.
+ \end{itemize}
 
 Teilfunktion Treppensteigen:
 \begin{itemize}
-    \item Die Teillösung ein kleines Fahrzeug mit Hilfe eines Katapults über die Treppe, auf das Zielpodest zu schiessen kann wegen dem 2. Killerkriterium nicht weiterverfolgt werden. Das ganze Gerät muss sich auf dem Zielpodest befinden. Dies ist mit einem Katapult nicht möglich, da zwar das kleine Fahrzeug, dass katapultiert wird sich im Ziel befindet, jedoch das Katapult an Ort und Stelle im Startbereich bleibt.
-    \item Auch die Idee eine Bahn von einem grossen Fahrzeug über die Treppe auszufahren, um mit einem kleinen Fahrzeug diese Bahn zu befahren scheitert am 2. Killerkriterium. Auch hier wäre zwar das kleine Fahrzeug auf dem Zielpodest, aber das grosse Bahnläger-Fahrzeug würde im Startbereich verbleiben.
-    \item Die Teillösung einer Schlange mit Magneten an den Enden, um mit Hilfe dieser Magneten an den Vorderseiten der Treppenstufen die Treppe heraufzuklettern fällt weg, aufgrund des 3. Killerkriteriums. Da die Treppenstufen aus Holz oder Aluminium sein werden, wird der Einsatz von Magneten nicht möglich sein, da diese Materialien nicht magnetisch sind.
+    \item Die speziellen Treppenräder fallen wegen dem fünften Killerkriterium raus. Da den Hindernissen ausgeweicht werden muss, ist eine Verschiebung auf einem Treppentritt nötig. Dies ist mit einem Fahrzeug mit speziellen Treppenrädern nicht möglich.
+    \item Die Teillösung ein kleines Fahrzeug mit Hilfe eines Katapults über die Treppe, auf das Zielpodest zu schiessen kann wegen dem zweiten Killerkriterium nicht weiterverfolgt werden. Das ganze Gerät muss sich auf dem Zielpodest befinden. Dies ist mit einem Katapult nicht möglich, da zwar das kleine Fahrzeug, dass katapultiert wird sich im Ziel befindet, jedoch das Katapult an Ort und Stelle im Startbereich bleibt.
+    \item Auch die Idee eine Bahn von einem grossen Fahrzeug über die Treppe auszufahren, um mit einem kleinen Fahrzeug diese Bahn zu befahren scheitert am zweiten Killerkriterium. Auch hier wäre zwar das kleine Fahrzeug auf dem Zielpodest, aber das grosse Bahnläger-Fahrzeug würde im Startbereich verbleiben.
+    \item Die Teillösung einer Schlange mit Magneten an den Enden, um mit Hilfe dieser Magneten an den Vorderseiten der Treppenstufen die Treppe heraufzuklettern fällt weg, aufgrund des dritten Killerkriteriums. Da die Treppenstufen aus Holz oder Aluminium sein werden, wird der Einsatz von Magneten nicht möglich sein, da diese Materialien nicht magnetisch sind.
 \end{itemize}
+
+Teilfunktion Hindernisse überwinden:
+\begin{itemize}
+    \item Die Teillösungen die Hindernisse zu überfahren oder zu besteigen sind nicht möglich wegen dem vierten Killerkriteriums. Da die Hindernisse auch hochkant platziert werden können, können diese nicht einfach überfahren oder bestiegen werden.
+    \item Die Teillösung die Hindernisse zu überfliegen fällt weg, weil die Rotoren und Propeller bereits ausgeschieden sind.
+ \end{itemize}
 
 \textbf{Verbleibende Teillösungen für die zweite Evaluation}
 
-\begin{longtable}[h]{l|l|l}
+\begin{longtable}[h]{l p{7cm} l}
 %\toprule
 \textbf{Fortbewegung} & \textbf{Treppensteigen} & \textbf{Lenkung} 
 \tabularnewline
@@ -66,8 +90,68 @@ Omnidrive – Fahrdrehmodul & Hebemechanismus: Aufstapeln und Ausfahren & Roomba
 Beine & Sprungfeder &
 \end{longtable}
 
-\subsection{Elektrotechnik}
+\begin{longtable}[h]{l p{7cm} l}
+%\toprule
+\textbf{Hindernisse überwinden} 
+\tabularnewline
+%\midrule
+\endhead
+Umgehen
+\end{longtable}
+\newpage
 
+
+\subsection{Elektrotechnik}
+\textbf{Killerkriterien}
+\begin{enumerate} 
+    \item Budget von 500.- nicht überschreiten
+	\item Treppe und Treppenstufen finden/erkennen
+	\item Hindernisse finden/erkennen
+	\item Das Fahrzeug muss fähig sein zwei Läufe zu absolvieren.
+	\item Das gesamte Gewicht von 3kg nicht überschreiten
+	\item Das Gerät soll mit einem Not-Aus Taster sofort gestoppt werden können. 
+	\item Autonomes Fahren unter allen zu erwartenden Licht- und Umgebungsbedingungen 
+\end{enumerate}
+
+\textbf{Ausgeschiedene Lösungsmöglichkeiten}
+
+Orientierung
+\begin{itemize}
+    \item GPS hat eine Genauigkeit von ca. einem Meter und ist für eine präzise Positionierung auf der Treppe oder auf dem Startfeld ungeeignet.
+\end{itemize}
+Antrieb
+\begin{itemize}
+    \item Ein Verbrennungsmotor aufgrund des hohen Gewichts nicht geeignet. Ausserdem muss die Mechanische Energie in elektrische Energie für die elektrischen Bauteile umgewandelt werden.
+    \item Ein Federwerk ist wegen der geringen Leistung nicht geeignet. Nur durch einmaliges Aufziehen des Federwerks, könnte der Roboter keine zwei Läufe absolvieren.
+\end{itemize}
+Not-Aus
+\begin{itemize}
+    \item Das Killerkriterium 6 verlangt einen Not-Aus Taster. Somit fallen die Funktionen 'Negative Beschleungiung' und 'Energie kappen' weg.
+\end{itemize}
+Energiequelle
+\begin{itemize}
+    \item Brennstoffzelle: Um eine genügend hohe Spannung und Kapazität für die elektrischen Bauteile, wie Prozessoren und Antriebsmotoren, zu erreichen, wäre eine hohe Anzahl an Zellen nötig. Dies würde das Gewicht des Roboters stark erhöhen. Mit weniger Zellen ist die Kapazität zu gering und es wäre gemäss Killerkriterium 4 nicht möglich zwei Läufe zu absolvieren.
+    \item Photovoltaik: Gemäss dem Killerkriterium 7 muss der Roboter bei jeden Witterungsbedingnugen einsatzbereit sein. Durch bewölkten Himmel würde ein Photovolatikzelle nicht genügend Energie für den Betrieb des Roboters liefern.
+\end{itemize}
+
+\textbf{Verbleibende Lösungen für die zweite Evaluation}
+\begin{center}
+\begin{tabular}{ l l l l}
+ \textbf{Orientierung} & \textbf{Antrieb} & \textbf{Not-Aus} & \textbf{Energiequelle} \\ 
+ \hline
+ Tastsensor & Bürstenloser DC-Motor & Not-Aus-Schalter & Akku\\  
+ Distanzsensor & Linearantrieb &  &\\
+ Kamera & Schrittmotor & &\\
+ TOF/Lidar & Servomotor & &\\
+ Beschleunigungssensor & Getriebemotor & & 
+\end{tabular}
+\end{center}
+
+
+
+
+
+\newpage
 \subsection{Auftragsquittierung}
 \textbf{Killerkriterien}
 \begin{enumerate} 
@@ -121,3 +205,21 @@ CognitiveJ - Image Analysis mit Java:
     \item Scikit Learn
     \item Scikit Image
 \end{itemize}
+
+\subsection{\acrshort{lofi} Prototypen}
+
+Um ein erstes Gefühl dafür zu bekommen ob eine Idee funktionieren kann, eignet es 
+sich einen \acrfull{lofi} Prototypen zu bauen. Um die funktionsweise
+des "Frosch" Prinzips für das Treppensteigen zu testen.
+
+Als erstes wollten wir prüfen ob die Idee umsetzbar ist.
+Eine Unsicherheit dabei war der Schwerpunkt und ob das Modell kippt
+bevor es die Treppenstufe erreicht. Ein erstes Kartonmodell zeigt,
+dass die Treppen so bestiegen werden könnten.
+
+In einer nächsten Evaluation wollen wir das ganze in einem 1:1 Prototypen
+realisieren.
+
+\image
+ {img/frosch.png}
+ {Treppensteigen mit dem "Frosch" prinzip}

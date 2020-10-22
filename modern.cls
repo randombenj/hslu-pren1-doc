@@ -745,9 +745,9 @@
 \newcommand\workday[4]{
   \noindent{\begin{tabularx}{\textwidth}{ >{\hsize=.4\hsize}X >{\hsize=1.6\hsize}X }
 
-    \bf{Datum} & {#1} \\
+    \bf{Sprint} & {#1} \\
     \bf{Projektstatus} & {#2} \\
-    \bf{Tagesablauf} & {#3} \\
+    \bf{Zusammenfassung} & {#3} \\
     \bf{Reflexion} & {#4} \\
     \multicolumn{2}{X}{\bf{Scrum Board}} \\
 
@@ -822,3 +822,19 @@
     \pdfpagewidth=\paperwidth
     \headwidth=\textwidth
   }
+  
+  
+\newcommand{\dayliboard}[1]{
+  \includegraphics[
+    width=\textwidth,
+    keepaspectratio,
+    trim={
+      3mm, % left
+      8mm, % bottom
+      3mm, % right
+      0mm  % top
+    },
+    clip
+  ]{#1}
+
+}
