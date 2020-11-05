@@ -1,0 +1,17 @@
+\section{Funktionsmuster}
+\subsection{Piktogrammerkennung mit CNN}
+Das Ziel dieses Funktionsmusters ist es in erster Linie, Erfahrung zu sammeln mit OpenCV und der Piktogrammerkennung mit einem Convolutional Neural Network (CNN). Als CNN wurde eine vereinfachte Version der VGGNet Architektur gewählt.
+
+\subsubsection{Trainingsdaten}
+Das Datenset besteht aus 500 Bildern über fünf Kategorien.
+\begin{itemize}
+    \item Hammer Piktogramm (100 Bilder)
+    \item Farbkessel Piktogramm (100 Bilder)
+    \item Lineal Piktogramm (100 Bilder)
+    \item Bliestift Piktogramm (100 Bilder)
+    \item Taco Piktogramm (100 Bilder)
+ \end{itemize}
+ 
+Die Trainingsdaten sind auf die Bilder in der Aufgabenstellung beschränkt. Um das Datenset zu vergrössern wurden aus den original Piktogrammen mithilfe von Dataaugmentation viele leicht abgeänderte Versionen erstellt. Das Ziel dieses CNN ist, dass es anhand dieser Trainingsdaten die Piktogramme in der realen Welt korrekt klassifizieren kann.
+
+\subsubsection{Trainingsergebnisse}

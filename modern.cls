@@ -171,8 +171,8 @@
   \section*{\listtablename}
   \addcontentsline{toc}
     {section}
-    {\listfigurename}
-  \@starttoc{lof}
+    {\listtablename}
+  \@starttoc{lot}
 }
 \makeatother
 
