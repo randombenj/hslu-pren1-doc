@@ -2,7 +2,8 @@
 
 Für den ersten Evaluationsschritt werden Killerkriterien formuliert. Diese Killerkriterien sind aus der Anforderungsliste und der Aufgabestellung abgeleitet. Es soll eine Erstevaluation gemacht werden, um die vielen recherchierten Lösungsmöglichkeiten einzugrenzen. Die verbleibenden, möglichen Teillösungen werden anschliessend in einem morphologischen Kasten zusammengetragen. Mit dem morphologischen Kasten werden die Teillösungen zu mehreren Gesamtlösungen kombiniert. Diese Gesamtlösungen werden dann in einem zweiten Evaluationsschritt mit einer Nutzwertanalyse bewertet.
 
-\subsection{Mechanisch}
+In einem ersten Schritt werden Killerkriterien erstellt, auf welche sich die nachfolgenden Evaluationen beziehen:
+
 \textbf{Killerkriterien}
 \begin{enumerate} 
 	\item Gerät funktioniert bei jeder Witterung. Gerät darf nicht von Wind und Regen beeinflusst werden.
@@ -10,49 +11,51 @@ Für den ersten Evaluationsschritt werden Killerkriterien formuliert. Diese Kill
 	\item Die Treppenstufen sind aus Holz oder Aluminium (nicht magnetisch).
 	\item Die Hindernisse liegen zufällig flach oder hochkant verteilt auf der Treppe.
 	\item Aufgrund des vierten Killerkriteriums muss auf einem Treppentritt nach rechts oder links ausgewichen werden können.
+    \item Budget von CHF 500 nicht überschreiten
+	\item Treppe und Treppenstufen finden/erkennen
+	\item Hindernisse finden/erkennen
+	\item Das Fahrzeug muss fähig sein zwei Läufe zu absolvieren.
+	\item Das gesamte Gewicht von 3kg nicht überschreiten
+	\item Das Gerät soll mit einem Not-Aus Taster sofort gestoppt werden können. 
+	\item Die Aufträge welche quittiert werden müssen, sind im vorhinein bekannt.
+	\item Das Gerät muss die Aufgabe autonom bewältigen. Es ist nicht erlaubt, das Gerät von einem externen stationären Rechner aus oder fremd zu steuern.
 \end{enumerate}
+
+
+
+\subsection{Mechanisch}
 
 \textbf{Ausgeschiedene Teilfunktionen}
 
-\begin{longtable}[h]{l p{7cm} l}
-%\toprule
-\textbf{Fortbewegung} & \textbf{Treppensteigen} & \textbf{Lenkung} 
-\tabularnewline
-%\midrule
-\endhead
-Normale Räder & Spezielle Treppenräder & Lenkachse 
-\tabularnewline
-Omnidrive–Allseitenräder & Hebemechanismus: 3-Teilig & Knicklenkung 
-\tabularnewline
-Omnidrive–Mecanumräder & Hebemechanismus: Raufkappen & Panzerlenkung 
-\tabularnewline
-Omnidrive–Fahrdrehmodul & Hebemechanismus: Aufstapeln und Ausfahren & Roomba-Prinzip 
-\tabularnewline
-\cellcolor{red}Propeller,Rotoren & \cellcolor{red}Katapult & 
-\tabularnewline
-Beine & Sprungfeder &
-\tabularnewline
- & \cellcolor{red}Bahn über Treppe ausfahren für kleines Fahrzeug & 
-\tabularnewline
- & \cellcolor{red}Schlange mit Magneten & 
-\end{longtable}
-\captionlistentry[table]{Teilfunktionen Mechanik 1}
+\begin{center}
+\begin{table}[h!]
+    \begin{tabular}{l|l|l}
+        \textbf{Fortbewegung} & \textbf{Treppensteigen} & \textbf{Lenkung} \\
+        Normale Räder & Spezielle Treppenräder & Lenkachse \\
+        Omnidrive–Allseitenräder & Hebemechanismus: 3-Teilig & Knicklenkung \\ 
+        Omnidrive–Mecanumräder & Hebemechanismus: Raufkappen & Panzerlenkung \\
+        Omnidrive–Fahrdrehmodul & Hebemechanismus: Aufstapeln und Ausfahren & Roomba-Prinzip \\
+        \cellcolor{red}Propeller,Rotoren & \cellcolor{red}Katapult & \\
+        Beine & Sprungfeder & \\
+         & \cellcolor{red}Bahn über Treppe ausfahren für kleines Fahrzeug & \\ 
+         & \cellcolor{red}Schlange mit Magneten & \\
+    \end{tabular}
+    \caption{Teilfunktionen Mechanik 1}
+\end{table}
+\end{center}
 
-\begin{longtable}[h]{l p{7cm} l}
-%\toprule
-\textbf{Hindernisse überwinden} 
-\tabularnewline
-%\midrule
-\endhead
-Umgehen
-\tabularnewline
-\cellcolor{red}Überfahren
-\tabularnewline
-\cellcolor{red}Überfliegen
-\tabularnewline
-\cellcolor{red}Besteigen
-\end{longtable}
-\captionlistentry[table]{Teilfunktionen Mechanik 2}
+\begin{center}
+\begin{table}[h!]
+    \begin{tabular}{l}
+        \textbf{Hindernisse überwinden}\\
+        Umgehen\\
+        \cellcolor{red}Überfahren\\
+        \cellcolor{red}Überfliegen\\
+        \cellcolor{red}Besteigen\\
+    \end{tabular}
+    \caption{Teilfunktionen Mechanik 2}
+\end{table}
+\end{center}
 
 Teilfunktion Fortbewegung:
 \begin{itemize}
@@ -75,47 +78,33 @@ Teilfunktion Hindernisse überwinden:
 
 \textbf{Verbleibende Teillösungen für die zweite Evaluation}
 
-\begin{longtable}[h]{l p{7cm} l}
-%\toprule
-\textbf{Fortbewegung} & \textbf{Treppensteigen} & \textbf{Lenkung} 
-\tabularnewline
-%\midrule
-\endhead
-Normale Räder & Spezielle Treppenräder & Lenkachse 
-\tabularnewline
-Omnidrive – Allseitenräder & Hebemechanismus: 3-Teilig & Knicklenkung 
-\tabularnewline
-Omnidrive – Mecanumräder & Hebemechanismus: Raufkappen & Panzerlenkung 
-\tabularnewline
-Omnidrive – Fahrdrehmodul & Hebemechanismus: Aufstapeln und Ausfahren & Roomba - Prinzip 
-\tabularnewline
-Beine & Sprungfeder &
-\end{longtable}
-\captionlistentry[table]{Lösungen Mechanik 1}
+\begin{center}
+\begin{table}[h!]
+    \begin{tabular}{l|l|l}
+        \textbf{Fortbewegung} & \textbf{Treppensteigen} & \textbf{Lenkung}\\
+        Normale Räder & Spezielle Treppenräder & Lenkachse\\ 
+        Omnidrive – Allseitenräder & Hebemechanismus: 3-Teilig & Knicklenkung\\ 
+        Omnidrive – Mecanumräder & Hebemechanismus: Raufkappen & Panzerlenkung\\ 
+        Omnidrive – Fahrdrehmodul & Hebemechanismus: Aufstapeln und Ausfahren & Roomba - Prinzip\\ 
+        Beine & Sprungfeder &\\
+    \end{tabular}
+    \caption{Verbleibende Lösungen Mechanik 1 nach der ersten Evaluation}
+\end{table}
+\end{center}
 
-\begin{longtable}[h]{l p{7cm} l}
-%\toprule
-\textbf{Hindernisse überwinden} 
-\tabularnewline
-%\midrule
-\endhead
-Umgehen
-\end{longtable}
-\captionlistentry[table]{Lösungen Mechanik 2}
+\begin{center}
+\begin{table}[h!]
+    \begin{tabular}{l}
+        \textbf{Hindernisse überwinden}\\
+        Umgehen
+    \end{tabular}
+    \caption{Verbleibende Lösungen Mechanik 2 nach der ersten Evaluation}
+\end{table}
+\end{center}
 \newpage
 
 
-\subsection{Elektrotechnik}
-\textbf{Killerkriterien}
-\begin{enumerate} 
-    \item Budget von CHF 500 nicht überschreiten
-	\item Treppe und Treppenstufen finden/erkennen
-	\item Hindernisse finden/erkennen
-	\item Das Fahrzeug muss fähig sein zwei Läufe zu absolvieren.
-	\item Das gesamte Gewicht von 3kg nicht überschreiten
-	\item Das Gerät soll mit einem Not-Aus Taster sofort gestoppt werden können. 
-	\item Autonomes Fahren unter allen zu erwartenden Licht- und Umgebungsbedingungen 
-\end{enumerate}
+\subsection{Elektrotechnische Bauteile}
 
 \textbf{Ausgeschiedene Lösungsmöglichkeiten}
 
@@ -126,55 +115,48 @@ Orientierung
 Antrieb
 \begin{itemize}
     \item Ein Verbrennungsmotor aufgrund des hohen Gewichts nicht geeignet. Ausserdem muss die Mechanische Energie zuerst in elektrische Energie für die elektrischen Bauteile umgewandelt werden.
-    \item Ein Federwerk ist wegen der geringen Leistung nicht geeignet. Nur durch einmaliges Aufziehen des Federwerks, könnte der Roboter keine zwei Läufe absolvieren.
+    \item Ein Federwerk ist wegen der geringen Leistung nicht geeignet. Nur durch einmaliges Aufziehen des Federwerks könnte der Roboter keine zwei Läufe absolvieren.
 \end{itemize}
 Not-Aus
 \begin{itemize}
-    \item Das Killerkriterium 6 verlangt einen Not-Aus Taster. Somit fallen die Funktionen 'Negative Beschleungiung' und 'Energie kappen' weg.
+    \item Das Killerkriterium 11 verlangt einen Not-Aus Taster. Somit fallen die Funktionen 'Negative Beschleungiung' und 'Energie kappen' weg.
 \end{itemize}
 Energiequelle
 \begin{itemize}
-    \item Brennstoffzelle: Um eine genügend hohe Spannung und Kapazität für die elektrischen Bauteile, wie Prozessoren und Antriebsmotoren, zu erreichen, wäre eine hohe Anzahl an Zellen nötig. Dies würde das Gewicht des Roboters stark erhöhen. Mit weniger Zellen ist die Kapazität zu gering und es wäre gemäss Killerkriterium 4 nicht möglich zwei Läufe zu absolvieren.
-    \item Photovoltaik: Gemäss dem Killerkriterium 7 muss der Roboter bei jeden Witterungsbedingnugen einsatzbereit sein. Durch bewölkten Himmel würde ein Photovolatikzelle nicht genügend Energie für den Betrieb des Roboters liefern.
+    \item Brennstoffzelle: Um eine genügend hohe Spannung und Kapazität für die elektrischen Bauteile, wie Prozessoren und Antriebsmotoren, zu erreichen, wäre eine hohe Anzahl an Zellen nötig. Dies würde das Gewicht des Roboters stark erhöhen. Mit weniger Zellen ist die Kapazität zu gering und es wäre gemäss Killerkriterium 9 nicht möglich zwei Läufe zu absolvieren.
+    \item Photovoltaik: Gemäss dem Killerkriterium 1 muss der Roboter bei jeden Witterungsbedingnugen einsatzbereit sein. Durch bewölkten Himmel würde ein Photovolatikzelle nicht genügend Energie für den Betrieb des Roboters liefern.
 \end{itemize}
 
 \textbf{Verbleibende Lösungen für die zweite Evaluation}
 \begin{center}
-\begin{longtable}[h]{ l l l l}
- \textbf{Orientierung} & \textbf{Antrieb} & \textbf{Not-Aus} & \textbf{Energiequelle} \\ 
- \hline
- Tastsensor & Bürstenloser DC-Motor & Not-Aus-Schalter & Akku\\  
- Distanzsensor & Linearantrieb &  &\\
- Kamera & Schrittmotor & &\\
- TOF/Lidar & Servomotor & &\\
- Beschleunigungssensor & Getriebemotor & & 
-\end{longtable}
+\begin{table}[h!]
+    \begin{tabular}{l|l|l|l}
+        \textbf{Orientierung} & \textbf{Antrieb} & \textbf{Not-Aus} & \textbf{Energiequelle} \\ 
+        \hline
+        Tastsensor & Bürstenloser DC-Motor & Not-Aus-Schalter & Akku\\  
+        Distanzsensor & Linearantrieb &  &\\
+        Kamera & Schrittmotor & &\\
+        TOF/Lidar & Servomotor & &\\
+        Beschleunigungssensor & Getriebemotor & & 
+    \end{tabular}
+    \caption{Verbleibende Lösungen Elektrotechnik nach der ersten Evaluation}
+\end{table}
 \end{center}
-\captionlistentry[table]{Lösungen Elektrotechnik}
-
-
-
-
 
 
 \newpage
 \subsection{Auftragsquittierung}
-\textbf{Killerkriterien}
-\begin{enumerate} 
-    \item Für den Bau der Teilfunktionsmuster in PREN 1 und für die Realisierung des Systems in PREN 2 stehen Ihnen als Team insgesamt CHF 500.- zur Verfügung. 
-	\item Die Aufträge welche quittiert werden müssen, sind im vorhinein bekannt.
-\end{enumerate}
 
 \textbf{Ausgeschiedene Lösungsmöglichkeiten} 
 
 OLED-Display:
 \begin{itemize}
-    \item Die Lösungsmöglichkeit, den Auftrag mittels eines OLED-Displays dem Publikum zu quittieren kann aufgrund des ersten Killerkriteriums nicht weiter verfolgt werden. Da die Kosten knapp sind, die Auftragsquittierung nicht zu den Knackpunkten dieses Projekts gehört und das OLED-Display verhältnismässig teuer ist, sollte man hier auf günstigere Möglichkeiten ausweichen.
+    \item Die Lösungsmöglichkeit, den Auftrag mittels eines OLED-Displays dem Publikum zu quittieren kann aufgrund des sechsten Killerkriteriums nicht weiter verfolgt werden. Da die Kosten knapp sind, die Auftragsquittierung nicht zu den Knackpunkten dieses Projekts gehört und das OLED-Display verhältnismässig teuer ist, sollte man hier auf günstigere Möglichkeiten ausweichen.
 \end{itemize}
 
 Word Vorlesefunktion + Lautsprecher:
 \begin{itemize}
-    \item Die Lösungsmöglichkeit den Auftrag mittels der Word Vorlesefunktion auszugeben scheidet aufgrund des zweiten Killerkriteriums aus. Ein Vorteil dieser Variante ist, dass man grundsätzlich beliebige Sätze leicht erstellen und ausgeben kann. Da in diesem Projekt jedoch bekannt ist, was quittiert werden muss, fällt dieser Vorteil nicht mehr ins Gewicht.
+    \item Die Lösungsmöglichkeit den Auftrag mittels der Word Vorlesefunktion auszugeben scheidet aufgrund des 13. Killerkriteriums aus. Ein Vorteil dieser Variante ist, dass man grundsätzlich beliebige Sätze leicht erstellen und ausgeben kann. Da in diesem Projekt jedoch bekannt ist, was quittiert werden muss, fällt dieser Vorteil nicht mehr ins Gewicht.
 \end{itemize}
 
 \textbf{Verbleibende Lösungen für die zweite Evaluation}
