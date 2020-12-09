@@ -3,7 +3,7 @@ In der zweiten Evaluation werden drei Lösungsvarianten in einem morphologischen
 \subsection{Morphologischer Kasten}
 In der ersten Phase der zweiten Evaluation werden die Ergebnisse der ersten Evaluation in einem morphologischen Kasten zusammengefasst. Mithilfe dieses morphologischen Kastens werden drei mögliche Lösungskonzepte zusammengestellt. Hierbei wird sich an der Teilfunktion ``Treppensteigen'' orientiert. Nach dem ersten Schritt, werden die restlichen Komponenten hinzugefügt. Die Hauptunterschiede dieser drei möglichen Lösungskonzepte (Frosch, 3-teiliger Hebemechanismus, Spinne) liegen bei den Teilfunktionen: Treppensteigen, Lenkung und Fortbewegung.
 
-Unabhängig vom Treppensteig-Mechanismus und vom Robotertyp selbst sind neben der Kommunikation auch die Umgebungserkennung. Das hauptsächlich, weil es bei allen Robotern gleichermassen vorhanden sein muss. Bei der Steuerungseinheiten wird Raspberry und Arduino im Vordergrund stehen. Dies aufgrund der bewährten Zuverlässigkeit und Einfachheit. Ebenfalls aufgrund der bereits vorhandenen Erfahrung mit diesen Entwicklerboards. Die Kommunikation wird über Buzzer oder 5V-Lautsprecher in Verbindung mit LEDs getätigt. Mit einziger Ausnahme von Variante 3, sie verzichtet auf die LED und verwendet dafür ein LCD Display.
+Unabhängig vom Treppensteig-Mechanismus und vom Robotertyp selbst sind neben der Kommunikation auch die Umgebungserkennung. Das hauptsächlich, weil es bei allen Robotern gleichermassen vorhanden sein muss. Bei der Steuerungseinheiten wird das Raspberry im Vordergrund stehen. Dies aufgrund der bewährten Zuverlässigkeit und Einfachheit. Ebenfalls aufgrund der bereits vorhandenen Erfahrung mit diesem Entwicklerboard. Die Kommunikation wird über Buzzer oder 5V-Lautsprecher in Verbindung mit LEDs getätigt. Mit einziger Ausnahme von Variante 3, sie verzichtet auf die LED und verwendet dafür ein LCD Display.
 
 \subsubsection{Frosch}
 \image
@@ -62,15 +62,14 @@ Obwohl die Zuverlässigkeit des Prinzips des Froschs aufgrund vom Schwerpunkt we
 \image
    {img/nutzwertanalyse/orientierung.png}
    {Nutzwertanalyse der Orientierung}
-   
-Der Frosch und der 3-Teiler liegen gleich auf. Die Spinne fällt weg, weil wird die Bildqualität aufgrund des Ruckelns bei der Fortbewegung schwächer einstufen. Ebenfalls stufen wir die Montage der Kamera und Sensoren bei der Spinne als schwieriger ein.
+   Der Frosch und der 3-Teiler liegen gleich auf. Die Spinne fällt weg, da die Bildqualität aufgrund des Ruckelns während der Fortbewegung schwächer eingestuft wird. Ebenfalls stufen wir die Montage der Kamera und Sensoren bei der Spinne als schwieriger ein.
 
 \subsubsection{Umgebungserkennung}
 \image
    {img/nutzwertanalyse/umgebungserkennung.png}
    {Nutzwertanalyse der Umgebungserkennung}
    
-Da sich dieser Punkt auf die verwendete SW bezieht, fällt die Bewertung gleich aus. Ausser das der Entwicklungsaufwand bei der Spinne als höher eingestuft wird, weil man aufgrund des Ruckelns eine geringere Zuverlässigkeit aufweist und dies evtl. SW-Technisch abfangen muss. 
+Da sich dieser Punkt auf die verwendete Software bezieht, fällt die Bewertung gleich aus. Ausser, dass der Entwicklungsaufwand bei der Spinne als höher eingestuft wird. Dies vorallem aufgrund des Ruckelns, welches in der Software speziell abgefangen werden muss, da es sonst eine geringere Zuverlässigkeit aufweist. 
    
 \subsubsection{Auftragsquittierung}
 \image
@@ -204,7 +203,7 @@ Nachfolgend ist eine Übersicht der Komponenten des erst- und zweit-platzierten 
 
 \subsection{Mock-Up}
  
- Es wurde ein Mock-Up mit den ersten Massabschätzungen 1:1 erstellt. Das Mock-Up wurde aus Lego und Karton aufgebaut. Die ersten Massabschätzungen wurden anhand des Datenblatts der Treppe getroffen. Mit diesem Mock-Up wollte getestet werden, ob die Treppensteigfunktion funktioiniert, mit dem Treppensteigprinzip, das anhand der Nutzwertanalyse das Beste ist. Auf einer aus Holz selber gebauten Treppe wurde die Hubbewegung von Hand getestet.
+ Es wird ein Mock-Up mit den ersten Massabschätzungen im Masstab 1:1 erstellt. Das Mock-Up wird aus Lego und Karton aufgebaut. Die ersten Massabschätzungen werden anhand des Datenblatts der Treppe getroffen. Mit diesem Mock-Up soll getestet werden, ob das Treppensteigen mit dem in der Nutzwertanalyse definierten Treppensteigprinzip funktioiniert. Getestet wird dieses Mock-Up auf einer selbst gebauten Holztreppe.
  Ziel ist es dieses Mock-Up als Grundlage für einen Prototypen zu verwenden, der die Hubbewegung automatisch ausführt.
  
  \imagewidth

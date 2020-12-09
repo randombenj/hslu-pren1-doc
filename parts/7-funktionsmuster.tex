@@ -34,33 +34,50 @@ Wie im Plot ersichtlich, wurde das CNN über 100 Epochs traniert und erreichte:
    
 \subsubsection{Tests}
 Um die Effektivität des Trainings zu testen wurden verschiedenen Testbilder dem CNN übergeben. Das Diagramm kann die Originalbilder mit weissem Hintergrund voneinander unterscheiden. Jedoch sobald sich eine Umgebung im Hintergrund des Bildes befindet, werden die Klassifizierungen sehr unpräzise.
-\image
-   {img/piktogrammerkennung/classifiedHammer.png}
-   {Ergebnisse der Hammerklassifizierung}
-   
-\image
-   {img/piktogrammerkennung/classifiedBucket.png}
-   {Ergebnisse der Farbkesselklassifizierung}
-   
-\image
-   {img/piktogrammerkennung/classifiedRuler.png}
-   {Ergebnisse der Linealklassifizierung}
-   
-\image
-   {img/piktogrammerkennung/classifiedPen.png}
-   {Ergebnisse der Bleistiftklassifizierung}
-   
-\image
-   {img/piktogrammerkennung/classifiedTaco.png}
-   {Ergebnisse der Tacoklassifizierung}
 
-\image
-   {img/piktogrammerkennung/classifiedBucketBG.png}
-   {Ergebnisse der Farbkesselklassifizierung mit Hintergrundumgebung}
+\begin{figure}[H]
+  \includegraphics[width=0.7\textwidth]{img/piktogrammerkennung/classifiedHammer.png}
+  \centering
+  \caption{Ergebnisse der Hammerklassifizierung}
+\end{figure}
+
+\begin{figure}[H]
+  \includegraphics[width=0.7\textwidth]{img/piktogrammerkennung/classifiedBucket.png}
+  \centering
+  \caption{Ergebnisse der Farbkesselklassifizierung}
+\end{figure}
+
+\begin{figure}[H]
+  \includegraphics[width=0.7\textwidth]{img/piktogrammerkennung/classifiedRuler.png}
+  \centering
+  \caption{Ergebnisse der Linealklassifizierung}
+\end{figure}
    
-\image
-   {img/piktogrammerkennung/notClassifiedBucketBG.png}
-   {Ergebnisse der Farbkesselklassifizierung mit viel Hintergrundumgebung}
+\begin{figure}[H]
+  \includegraphics[width=0.7\textwidth]{img/piktogrammerkennung/classifiedPen.png}
+  \centering
+  \caption{Ergebnisse der Bleistiftklassifizierung}
+\end{figure}
+   
+\begin{figure}[H]
+  \includegraphics[width=0.7\textwidth]{img/piktogrammerkennung/classifiedTaco.png}
+  \centering
+  \caption{Ergebnisse der Tacoklassifizierung}
+\end{figure}
+   
+\begin{figure}[H]
+  \includegraphics[width=0.7\textwidth]{img/piktogrammerkennung/classifiedBucketBG.png}
+  \centering
+  \caption{Ergebnisse der Farbkesselklassifizierung mit Hintergrundumgebung}
+\end{figure}
+
+\begin{figure}[H]
+  \includegraphics[width=0.7\textwidth]{img/piktogrammerkennung/notClassifiedBucketBG.png}
+  \centering
+  \caption{Ergebnisse der Farbkesselklassifizierung mit viel Hintergrundumgebung}
+\end{figure}
+
+\newpage
 
 \subsubsection{Fazit}
 Dieses Funktionsmuster hat gezeigt, dass die Piktogramme bereits mit wenigen und simplen Testdaten mit einer sehr hohen Wahrscheinlichkeit korrekt klassifiziert werden. Vorausgesetzt, die Piktogramme sind mit schwarz auf weissem Hintergrund abgebildet und es befindet sich nichts weiter im Hintergrund. Der Ansatz, die Piktogramme mithilfe eines CNN mit einer vereinfachten VGGNet-Architektur zu erkennen, könnte also weiter verfolgt werden.  
@@ -75,7 +92,7 @@ Da die Piktogramme in der Realität jedoch nicht einfach schwarz auf weiss und o
  
 Jedoch hat sich im Daily-Standup mit dem Coach herausgestellt, dass machine learning nicht der richtige Lösungsansatz für die endliche Problemstellung der Piktogrammerkennung ist! 
 
-Da man lediglich fünf, bereits im Vorfeld bekannte Piktogramme erkennen muss, kann man das mit sogenanntem Template Matching\footnote{https://docs.opencv.org/master/d4/dc6/tutorial\_py\_template\_matching.html} realisieren. Hierbei werden Inputdaten mit den verschiedenen Templates, in unserem Fall die fünf Piktogramme, abgeglichen. Dabei wird versucht die verschiedenen Templates in den Inputdaten zu erkennen. 
+Da man lediglich fünf, bereits im Vorfeld bekannte Piktogramme erkennen muss, kann man das mit sogenanntem Template Matching\cite{OpenCV-Template-Matching} realisieren. Hierbei werden Inputdaten mit den verschiedenen Templates, in unserem Fall die fünf Piktogramme, abgeglichen. Dabei wird versucht die verschiedenen Templates in den Inputdaten zu erkennen. 
 
 
 \subsection{Hindernisserkennung}
@@ -83,7 +100,7 @@ Da man lediglich fünf, bereits im Vorfeld bekannte Piktogramme erkennen muss, k
 Um die Treppe besteigen zu können, und nicht in die Hindernisse hineinzufahren, müssen
 diese zuerst erkannt werden. Wie bereits bei anderen Kompenenten wird auch hier versucht, so einfach wie möglich zu bleiben.
 Als erstes wird evaluiert, wie gut die Hindernisse mit einer Kamera
-und simpler Bildverarbeitung, beispielsweise mittels OpenCV\footnote{https://opencv.org/}, erkannt werden
+und simpler Bildverarbeitung, beispielsweise mittels OpenCV\cite{OpenCV}, erkannt werden
 können.
 
 Eine erste Idee ist die Ziegelsteine mittels Farbe zu erkennen, diese Methode
@@ -92,7 +109,7 @@ Farben verschieden wahrgenommen werden. Die Belichtung ist ein allgemeines Probl
 tritt aber bei dieser Methode stärker hervor.
 
 Die folgenden Beispiele zeigen die Resultate der auf Farbe basierenden 
-Hinderniserkennung. Der sourcecode ist auf GitHub\footnote{https://github.com/randombenj/hslu-pren1/blob/master/research/obstacle-detection.ipynb} als auch im Anhang zu finden.
+Hinderniserkennung. Der sourcecode ist auf GitHub\footnote{https://github.com/randombenj/hslu-pren1/blob/master/research/obstacle-detection.ipynb} zu finden.
 
 \image
   {img/hinderniserkennung/color-detection1.png}
@@ -135,12 +152,12 @@ Um sich nun zu orientieren wurde versucht Kanten bzw. Linien in den Testdaten zu
     \item Finden von Linien (Hough Transform)
     \item Zeichnen der Linien
 \end{enumerate}
-Für das erkennen der Kanten wurden zwei verschiedenen Techniken angewandt. Zum einen der Canny Edge Detection Algorithmus\footnote{https://docs.opencv.org/master/da/d22/tutorial\_py\_canny.html}. Dieser Algorithmus erkennt Kanten auf einem Bild und färbt diese weiss ein. Je nach Justierung (mithilfe von zwei Parametern) werden mehr oder weniger Kanten erkannt.
+Für das erkennen der Kanten wurden zwei verschiedenen Techniken angewandt. Zum einen der Canny Edge Detection Algorithmus\cite{OpenCV-Canny}. Dieser Algorithmus erkennt Kanten auf einem Bild und färbt diese weiss ein. Je nach Justierung (mithilfe von zwei Parametern) werden mehr oder weniger Kanten erkannt.
 \image
   {img/orientierung-treppenstufe/collageCanny.jpg}
   {Bilverarbeitungschritte des Funktionsmusters für die Orientierung auf einer Treppenstufe mit Edge Detection}
   
-Zum anderen wurde Gebrauch vom Thresholding Algorithmus\footnote{https://docs.opencv.org/master/d7/d4d/tutorial\_py\_thresholding.html} gemacht. Dieser Algorithmus setzt voraus, dass das Bild in Graustufenform vorliegt, weil somit das Bild nur noch eine Farbdimension (0-255) enthält. Sobald dies der Fall ist, werden alle Pixelwerte oberhalb der Grenze z.B. auf Schwarz und alle die unterhalb der Grenze liegen auf z.B. Weiss gefärbt. Die Grenze kann beim Funktionsaufruf als Parameter übergeben werden.
+Zum anderen wurde Gebrauch vom Thresholding Algorithmus\cite{OpenCV-Threshold} gemacht. Dieser Algorithmus setzt voraus, dass das Bild in Graustufenform vorliegt, weil somit das Bild nur noch eine Farbdimension (0-255) enthält. Sobald dies der Fall ist, werden alle Pixelwerte oberhalb der Grenze z.B. auf Schwarz und alle die unterhalb der Grenze liegen auf z.B. Weiss gefärbt. Die Grenze kann beim Funktionsaufruf als Parameter übergeben werden.
 \image
   {img/orientierung-treppenstufe/collageThresh.jpg}
   {Bilverarbeitungschritte des Funktionsmusters für die Orientierung auf einer Treppenstufe mit thresholding}
@@ -149,11 +166,11 @@ Zum anderen wurde Gebrauch vom Thresholding Algorithmus\footnote{https://docs.op
 Um ein Gefühl für die Laufzeit solcher Bildverarbeitungen und für die Laufzeit dieses Funktionsmusters zu entwickeln, wurden Zehn Zeitmessungen erstellt. Diese wurden auf einem Microsoft Surface Book 2 durchgeführt. Die effektive Laufzeit auf dem Zielsystem (Raspberry Pi) kann also stark variieren!
 
 \begin{center}
-\begin{table}[h!]
+\begin{table}[ht!]
     \begin{tabular}{l|l|l|l|l|l|l|l|l|l|l}
-        \textbf{Durchlauf} & 1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 & 9 & 10 & \\
-        \textbf{Zeit [ms]} & 262.88 & 204.04 & 205.01 & 205 & 212.01 & 209.56 & 205 & 206 & 206.04 & 206 & \\
-        \textbf{Durchschnitt [ms]} & 212.15 & \\
+        \textbf{Durchlauf} & 1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 & 9 & 10 \\
+        \textbf{Zeit [ms]} & 262.88 & 204.04 & 205.01 & 205 & 212.01 & 209.56 & 205 & 206 & 206.04 & 206 \\
+        \textbf{Durchschnitt [ms]} & 212.15 \\
     \end{tabular}
     \caption{Zeitmessung des Algorithmus für die Orientierung auf einer Treppenstufe}
 \end{table}
@@ -166,39 +183,41 @@ Es ist möglich auf dieser Treppe mithilfe der Kamera sinnvolle Kanten auszulese
  hat, weiss man, dass der Roboter 30$^\circ$ nach rechts geneigt auf der Treppe steht.
 Es ist noch nicht klar, welcher Algorithmus besser geeignet ist, es wäre allenfalls auch eine Kombination der beiden denkbar, um verschiedene Lichtverhältnisse besser abfangen zu können.
 
-\subsection{Treppensteigen}
-Das Lego-Mock-Up, das erstellt wurde, um die Hubbewegungen von Hand simulieren zu können, sollte dazu verwendet werden, die Hubbewegungen automatisch zu simulieren. Die erste Hubbewegung konnte nicht relaisiert werden, da Lego dafür zu instabil war. Mit diesem Prototyp sollte gezeigt werden, dass das Funktionsprinzip funktioniert.  
+\newpage
+\subsection{Treppensteigen Prototyp 1}
+Das Lego-Mock-Up, das erstellt wurde, um die Hubbewegungen von Hand simulieren zu können, sollte dazu verwendet werden, die Hubbewegungen zu automatisieren. Es wurde nur eine Seite der Treppensteigkomponenten aufgebaut. 
+
+Der erste Prototyp diente dazu das Funktionsprinzip zu überprüfen. Es musste überprüft werden, ob die Standfüsse und die Verbindungsleisten unabhängig mit zwei Motoren gedreht werden können. 
 
 \subsubsection{Mechanische Komponenten}
-Das Lego-Mock-Up wurde für den Prototypenbau verkleinert, da der eingekaufte Modelbauzahnriemen nicht ganz den ersten Massabschätzungen entsprach. Die Zahnriemenräder wurden selber 3D-gedruckt. Das Antriebsrad konnte so direkt mit einem Zahnrad kommbiniert werden und in das Abtirebsrad konnte die Form einer Legowelle mitgedruckt werden. Der Grundkörper, die Standfüsse und die Verbindungsleisten wurden aus Legotechnik aufgebaut.
+Das Lego-Mock-Up wurde für den Prototypenbau verkleinert, da der eingekaufte Modelbauzahnriemen nicht ganz den ersten Massabschätzungen entsprach. Die Zahnriemenräder wurden selber 3D-gedruckt. Das Antriebsrad konnte so direkt mit einem Zahnrad kommbiniert werden und in das Abtirebsrad konnte die Form einer Legowelle mitgedruckt werden. Der Grundkörper, die Standfüsse und die Verbindungsleisten wurden aus Legotechnik aufgebaut.\\
 
-\image
-{img/Zahnrad gedruckt}
-{3D-gedrucktes Zahnriemenrad mit aufgesetztem Zahnrad}
+\begin{figure}[H]
+  \includegraphics[width=0.6\textwidth]{img/Zahnrad gedruckt.JPG}
+  \centering
+  \caption{3D-gedrucktes Zahnriemenrad mit aufgesetztem Zahnrad}
+\end{figure}
 
-\image
-{img/Prototyp Übersicht}
-{Protototyp Übersicht}
-
-
-\image
-{img/Testversuch}
-{Kontrolle des Funktionsprinzips}
-
+\begin{figure}[H]
+  \includegraphics[width=0.6\textwidth]{img/Prototyp Übersicht.png}
+  \centering
+  \caption{Protototyp Treppensteigen}
+\end{figure}
 
 \subsubsection{Elektrische Komponenten}
-Um die Bewegung der Arme ausführen zu können, werden zwei Getriebemotoren verwendet. Diese Motoren werden durch eine H-Brücke angesteuert. Die Steuerung übernimmt ein Raspberry Pi 4. 
+Um die Bewegung der Arme ausführen zu können, werden zwei Getriebemotoren verwendet. Diese Motoren werden durch eine H-Brücke angesteuert. Die Steuerung übernimmt ein Raspberry Pi 4.
 
-\begin{figure}[h]
+\begin{figure}[H]
   \includegraphics[width=0.6\textwidth]{img/Funktionsmuster Treppensteigen/Elektrische_Kompnenten.png}
   \centering
   \caption{Elektrische Komponenten des Prototyps}
 \end{figure}
 
-Um die Geschwindigkeit der Motoren individuell anpassen zu können, generiert der Raspberry Pi ein PWM-Signal für die H-Brücke. Dieses PWM-Signal kann in einem GUI mittels Slider von 0 bis 100\% verstellt werden. 
 \newpage
 
-\begin{figure}[h]
+Um die Geschwindigkeit der Motoren individuell anpassen zu können, generiert der Raspberry Pi ein PWM-Signal für die H-Brücke. Dieses PWM-Signal kann in einem GUI mittels Slider von 0 bis 100\% verstellt werden. 
+
+\begin{figure}[H]
   \includegraphics[width=0.6\textwidth]{img/Funktionsmuster Treppensteigen/GUI_Prototyp.png}
   \centering
   \caption{GUI der Steuerung des Prototyps}
@@ -206,8 +225,55 @@ Um die Geschwindigkeit der Motoren individuell anpassen zu können, generiert de
 
 Des Weiteren hat man die Möglichkeit auf dem GUI die Drehrichtung der einzelnen Motoren nach links und nach rechts zu wählen, sowie einzeln zu stoppen.
 
+\subsubsection{Test}
+
+Es wurde geprüft, ob sich der Standfuss mit dem Zahnriemen drehen lässt und ob mit dem zweiten Motor die Verbindungsleiste gedreht werden kann. Diese Versuche wurden zuerst einzeln gemacht, um die jeweilige Funktion zu testen. Zum Schluss wurde noch probiert mit der Verbindungsleiste eine Umdrehung zu machen und dabei den Standfuss horizontal zu halten.
+
+\begin{figure}[H]
+  \includegraphics[width=0.8\textwidth]{img/Testversuch.png}
+  \centering
+  \caption{Test des Funktionsprinzips}
+\end{figure}
+
 \subsubsection{Fazit}
 
 Mit diesem Prototypen sollten die Hubbewegungen automatisiert werden. Dies ist so nicht gelungen, jedoch konnte mit dem Prototyp das Funktionsprinzip überprüft werden.
 
-Nach den ersten ersten Tests wird klar, dass diese Methode funktioniert. Es gilt jedoch einige Faktoren besonders zu beachten. Die grösste Erkenntnis ist, dass die Hubbewegung mit zwei Motoren durchgeführt werden muss. Je ein Motor treibt eine Achse an, welche synchron beide Seiten antreibt. Diese Kraftübertragung wurde mithilfe des Prototypens getestet. 
+
+Nach den ersten Tests wird klar, dass das Funktionsprinzip funktioniert. Es gilt jedoch einige Faktoren zu beachten. Die grösste Erkenntnis beim Bau des Prototypen war, dass zwei Motoren notwendig sind. Je ein Motor wird für eine Drehung in einer Achse benötigt. Diese Motoren treiben beide Seiten synchron an. Die Kraftübertragung wurde mithilfe des Prototyps getestet.
+
+Der Bau des Prototypen für das Treppensteigen war wichtig und hat geholfen das Funktionsprinzip aufzubauen und zu verstehen.
+
+\newpage
+
+\subsection{Treppensteigen Prototyp 2}
+
+Da mit dem ersten Prototypen nur das Funktionsprinzip überprüft werden konnte, brauchte es einen zweiten Prototypen um die erste Hubbewegung zu simulieren, da sie die wichtigste Hubbewegung beim besteigen der Treppe ist. Es galt zu überprüfen, ob die erste Hubbewegung überhaupt machbar ist.
+
+\begin{figure}[H]
+  \includegraphics[width=0.8\textwidth]{img/Test 1. Hub.png}
+  \centering
+  \caption{Test 1. Hubbewegung}
+\end{figure}
+
+\subsubsection{Fazit}
+
+Es konnte gezeigt werden, dass die erste Hubbewegung umsetzbar ist. Die Bewegung funktioniert mit dem Zahnriemen für die Kraftübertragung.
+
+\subsection{Fortbewegung Prototyp}
+
+Für die Fortbewegung und Navigation unseres Roboters haben wir uns dafür entschieden zwei
+voneinander Unabhängige Räder mit zwei Halbkugelstützen zu implementieren. 
+Wir haben uns vor allem für dieses Prinzip entschieden, da es sehr simpel ist und man 
+sich auf der Stelle drehen kann. 
+
+Um die Funktionsweise für die Fortbewegung zu zeigen und erste Tests für Drehungen auf
+der Treppe zu zeigen, haben wir einen Prototzpen mit Lego Mindstorms \footnote{https://en.wikipedia.org/wiki/Lego_Mindstorms}
+gebaut.
+
+\image
+  {img/Fortbewegung/fortbewegung.png}
+  {Fortbewegungsprinzip mit Lego Mindstorms}
+
+
+
