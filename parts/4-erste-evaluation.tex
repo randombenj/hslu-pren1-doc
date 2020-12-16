@@ -1,6 +1,6 @@
 \section{Erste Evaluation}
 
-Für den ersten Evaluationsschritt werden Killerkriterien formuliert. Diese Killerkriterien sind aus der Anforderungsliste und der Aufgabestellung abgeleitet. Es soll eine Erstevaluation gemacht werden, um die vielen recherchierten Lösungsmöglichkeiten einzugrenzen. Die verbleibenden, möglichen Teillösungen werden anschliessend in einem morphologischen Kasten zusammengetragen. Mit dem morphologischen Kasten werden die Teillösungen zu mehreren Gesamtlösungen kombiniert. Diese Gesamtlösungen werden dann in einem zweiten Evaluationsschritt mit einer Nutzwertanalyse bewertet.
+Für den ersten Evaluationsschritt werden Killerkriterien formuliert, welche aus der Anforderungsliste und der Aufgabestellung abgeleitet werden. Es soll eine Erstevaluation durchgeführt werden, um die vielen recherchierten Lösungsmöglichkeiten einzugrenzen. Die verbleibenden, möglichen Teillösungen werden anschliessend in einem morphologischen Kasten zusammengetragen. Mit dem morphologischen Kasten werden die Teillösungen zu mehreren Gesamtlösungen kombiniert. Diese Gesamtlösungen werden dann in einem zweiten Evaluationsschritt mit einer Nutzwertanalyse bewertet.
 
 In einem ersten Schritt werden Killerkriterien erstellt, auf welche sich die nachfolgenden Evaluationen beziehen:
 
@@ -19,6 +19,7 @@ In einem ersten Schritt werden Killerkriterien erstellt, auf welche sich die nac
 	\item Das Gerät soll mit einem Not-Aus Taster sofort gestoppt werden können. 
 	\item Die Aufträge welche quittiert werden müssen, sind im vorhinein bekannt.
 	\item Das Gerät muss die Aufgabe autonom bewältigen. Es ist nicht erlaubt, das Gerät von einem externen stationären Rechner aus oder fremd zu steuern.
+	\item Das Gerät muss seine Position auf mehrere cm genau bestimmen können (Abstand zwischen zwei Hindernissen beträgt mindestens 400mm).
 \end{enumerate}
 
 
@@ -110,12 +111,12 @@ Teilfunktion Hindernisse überwinden:
 
 Orientierung
 \begin{itemize}
-    \item GPS hat eine Genauigkeit von ca. einem Meter und ist für eine präzise Positionierung auf der Treppe oder auf dem Startfeld ungeeignet.
+    \item GPS hat eine Genauigkeit von ca. einem Meter und ist für eine präzise Positionierung auf der Treppe oder auf dem Startfeld aufgrund des Killerkriterium 14 ungeeignet.
 \end{itemize}
 Antrieb
 \begin{itemize}
-    \item Ein Verbrennungsmotor aufgrund des hohen Gewichts nicht geeignet. Ausserdem muss die Mechanische Energie zuerst in elektrische Energie für die elektrischen Bauteile umgewandelt werden.
-    \item Ein Federwerk ist wegen der geringen Leistung nicht geeignet. Nur durch einmaliges Aufziehen des Federwerks könnte der Roboter keine zwei Läufe absolvieren.
+    \item Ein Verbrennungsmotor aufgrund des hohen Gewichts nicht geeignet (Killerkriterium 10). Ausserdem muss die Mechanische Energie zuerst in elektrische Energie für die elektrischen Bauteile umgewandelt werden.
+    \item Ein Federwerk ist wegen der geringen Leistung nicht geeignet. Nur durch einmaliges Aufziehen des Federwerks könnte der Roboter keine zwei Läufe absolvieren (Killerkriterium 9).
 \end{itemize}
 Not-Aus
 \begin{itemize}
@@ -168,21 +169,16 @@ Word Vorlesefunktion + Lautsprecher:
 \end{itemize}
 
 \subsection{Umgebungserkennung}
-\textbf{Killerkriterien}
-\begin{enumerate} 
-    \item Das Gerät muss die Aufgabe autonom bewältigen. Es ist nicht erlaubt, das Gerät von einem externen stationären Rechner aus oder fremd zu steuern.
-\end{enumerate}
-
 \textbf{Ausgeschiedene Lösungsmöglichkeiten}
 
 Google Vision API:
 \begin{itemize}
-    \item Die Google Vision API kann aufgrund des ersten Killerkriteriums nicht weiter vergolgt werden. Da es sich bei der Google Vision API um ein fertiges Produkt handelt und man über ein REST API auf die Algorithmen für die Bilderkennung und das maschinelle Lernen zugreift.
+    \item Die Google Vision API kann aufgrund des 13. Killerkriteriums nicht weiter verfolgt werden. Da es sich bei der Google Vision API um ein fertiges Produkt handelt und man über ein REST API auf die Algorithmen für die Bilderkennung und das maschinelle Lernen zugreift.
 \end{itemize}
 
 CognitiveJ - Image Analysis mit Java:
 \begin{itemize}
-    \item Auch diese Lösung fällt aufgrund des ersten Killerkriteriums aus dem Rennen. Hier wird ebenfalls übers Internet auf vorgefertigte Lösungen zugegriffen, welche sich nicht auf dem Gerät selber befinden. Somit würde das Gerät indirekt über einem externen Server gesteuert werden.
+    \item Auch diese Lösung fällt aufgrund des 13. Killerkriteriums aus dem Rennen. Hier wird ebenfalls übers Internet auf vorgefertigte Lösungen zugegriffen, welche sich nicht auf dem Gerät selber befinden. Somit würde das Gerät indirekt über einem externen Server gesteuert werden.
 \end{itemize}
 
 \textbf{Verbleibende Lösungen für die zweite Evaluation}
@@ -198,12 +194,12 @@ CognitiveJ - Image Analysis mit Java:
 
 Um ein erstes Gefühl dafür zu bekommen, ob eine Idee funktionieren kann, eignet es 
 sich einen \acrfull{lofi} Prototypen zu bauen, um die Funktionsweise
-des ``Frosch'' Prinzips für das Treppensteigen zu testen.
+des \glqq Frosch\grqq{} Prinzips für das Treppensteigen zu testen.
 
 Als erstes wird geprüft, ob die Idee umsetzbar ist.
 Eine Unsicherheit dabei ist der Schwerpunkt und ob das Modell kippt
 bevor es die Treppenstufe erreicht. Ein erstes Kartonmodell zeigt,
-dass die Treppen so bestiegen werden könnten.
+dass die Treppe so bestiegen werden könnte.
 
 In einer nächsten Evaluation soll das Prinzip in einem 1:1 Prototypen veranschaulicht und realisiert werden.
 

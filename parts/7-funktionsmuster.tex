@@ -3,7 +3,8 @@
 In diesem Abschnitt werden für gewisse Teilfunktionen des Roboters Funktionsmuster oder Prototypen erstellt. Damit können die Bewegungsabläufe und die technische Machbarkeit veranschaulicht werden. Ebenfalls können Probleme frühzeitig identifiziert und behoben werden.
 \subsection{Piktogrammerkennung mit CNN}
 \label{piktogrammerkennungMitCNN}
-Das Ziel dieses Funktionsmusters ist es in erster Linie, Erfahrung zu sammeln mit OpenCV und der Piktogrammerkennung mit einem Convolutional Neural Network (CNN). Als CNN wurde eine vereinfachte Version der VGGNet Architektur gewählt.
+% vereinfachen ("dobbelisecher")
+Das Ziel dieses Funktionsmusters ist es in erster Linie, Erfahrung zu sammeln mit OpenCV, Keras, TensorFlow und der Piktogrammerkennung mit einem Convolutional Neural Network (CNN). Als CNN wurde eine vereinfachte Version der VGGNet Architektur gewählt.
 Der Programmcode der Pythonscripts ist auf Github\footnote{https://github.com/randombenj/hslu-pren1/tree/master/pictogram\_detection} wie auch in Anhang zu finden.
 
 \subsubsection{Trainingsdaten}
@@ -20,7 +21,7 @@ Das Datenset besteht aus 500 Bildern über fünf Kategorien.
     \item Taco Piktogramm (100 Bilder)
  \end{itemize}
  
-Die Trainingsdaten sind auf die Bilder in der Aufgabenstellung beschränkt. Um das Datenset zu vergrössern wurden aus den original Piktogrammen mithilfe von Dataaugmentation viele leicht abgeänderte Versionen erstellt. Das Ziel dieses CNN ist, dass es anhand dieser Trainingsdaten die Piktogramme in der realen Welt korrekt klassifizieren kann.
+Die Trainingsdaten sind auf die Bilder in der Aufgabenstellung beschränkt. Um das Datenset zu vergrössern werden aus den original Piktogrammen mithilfe von Dataaugmentation viele leicht abgeänderte Versionen erstellt. Das Ziel dieses CNN ist, dass es anhand dieser Trainingsdaten die Piktogramme in der realen Welt korrekt klassifizieren kann. %für nicht informatiker verständlich machen
 
 \subsubsection{Trainingsergebnisse}
 Wie im Plot ersichtlich, wurde das CNN über 100 Epochs traniert und erreichte:
@@ -33,46 +34,46 @@ Wie im Plot ersichtlich, wurde das CNN über 100 Epochs traniert und erreichte:
    {Trainingsergebnisse des Funktionsmusters Piktogrammerkennung}
    
 \subsubsection{Tests}
-Um die Effektivität des Trainings zu testen wurden verschiedenen Testbilder dem CNN übergeben. Das Diagramm kann die Originalbilder mit weissem Hintergrund voneinander unterscheiden. Jedoch sobald sich eine Umgebung im Hintergrund des Bildes befindet, werden die Klassifizierungen sehr unpräzise.
+Um die Effektivität des Trainings zu testen werden verschiedenen Testbilder an das CNN übergeben. Das Diagramm kann die Originalbilder mit weissem Hintergrund voneinander unterscheiden. Sobald sich jedoch eine Umgebung im Hintergrund des Bildes befindet, werden die Klassifizierungen sehr unpräzise.
 
 \begin{figure}[H]
-  \includegraphics[width=0.7\textwidth]{img/piktogrammerkennung/classifiedHammer.png}
+  \includegraphics[width=0.7\textwidth]{img/piktogrammerkennung/classifiedHammer.PNG}
   \centering
   \caption{Ergebnisse der Hammerklassifizierung}
 \end{figure}
 
 \begin{figure}[H]
-  \includegraphics[width=0.7\textwidth]{img/piktogrammerkennung/classifiedBucket.png}
+  \includegraphics[width=0.7\textwidth]{img/piktogrammerkennung/classifiedBucket.PNG}
   \centering
   \caption{Ergebnisse der Farbkesselklassifizierung}
 \end{figure}
 
 \begin{figure}[H]
-  \includegraphics[width=0.7\textwidth]{img/piktogrammerkennung/classifiedRuler.png}
+  \includegraphics[width=0.7\textwidth]{img/piktogrammerkennung/classifiedRuler.PNG}
   \centering
   \caption{Ergebnisse der Linealklassifizierung}
 \end{figure}
    
 \begin{figure}[H]
-  \includegraphics[width=0.7\textwidth]{img/piktogrammerkennung/classifiedPen.png}
+  \includegraphics[width=0.7\textwidth]{img/piktogrammerkennung/classifiedPen.PNG}
   \centering
   \caption{Ergebnisse der Bleistiftklassifizierung}
 \end{figure}
    
 \begin{figure}[H]
-  \includegraphics[width=0.7\textwidth]{img/piktogrammerkennung/classifiedTaco.png}
+  \includegraphics[width=0.7\textwidth]{img/piktogrammerkennung/classifiedTaco.PNG}
   \centering
   \caption{Ergebnisse der Tacoklassifizierung}
 \end{figure}
    
 \begin{figure}[H]
-  \includegraphics[width=0.7\textwidth]{img/piktogrammerkennung/classifiedBucketBG.png}
+  \includegraphics[width=0.7\textwidth]{img/piktogrammerkennung/classifiedBucketBG.PNG}
   \centering
   \caption{Ergebnisse der Farbkesselklassifizierung mit Hintergrundumgebung}
 \end{figure}
 
 \begin{figure}[H]
-  \includegraphics[width=0.7\textwidth]{img/piktogrammerkennung/notClassifiedBucketBG.png}
+  \includegraphics[width=0.7\textwidth]{img/piktogrammerkennung/notClassifiedBucketBG.PNG}
   \centering
   \caption{Ergebnisse der Farbkesselklassifizierung mit viel Hintergrundumgebung}
 \end{figure}
@@ -80,7 +81,7 @@ Um die Effektivität des Trainings zu testen wurden verschiedenen Testbilder dem
 \newpage
 
 \subsubsection{Fazit}
-Dieses Funktionsmuster hat gezeigt, dass die Piktogramme bereits mit wenigen und simplen Testdaten mit einer sehr hohen Wahrscheinlichkeit korrekt klassifiziert werden. Vorausgesetzt, die Piktogramme sind mit schwarz auf weissem Hintergrund abgebildet und es befindet sich nichts weiter im Hintergrund. Der Ansatz, die Piktogramme mithilfe eines CNN mit einer vereinfachten VGGNet-Architektur zu erkennen, könnte also weiter verfolgt werden.  
+Dieses Funktionsmuster hat gezeigt, dass die Piktogramme bereits mit wenigen und simplen Testdaten mit einer sehr hohen Wahrscheinlichkeit korrekt klassifiziert werden. Vorausgesetzt, die Piktogramme sind mit schwarz auf weissem Hintergrund abgebildet und es befindet sich sonst nichts im Hintergrund. Der Ansatz, die Piktogramme mithilfe eines CNN mit einer vereinfachten VGGNet-Architektur zu erkennen, könnte also weiter verfolgt werden.  
 
 Da die Piktogramme in der Realität jedoch nicht einfach schwarz auf weiss und ohne Hintergrundumgebung vorzufinden sind, könnte man für eine korrekt Identifizierung folgende Ansätze weiterverfolgen:
 \begin{itemize}
@@ -90,12 +91,13 @@ Da die Piktogramme in der Realität jedoch nicht einfach schwarz auf weiss und o
     \item Anderes deep learning Modell verwenden
  \end{itemize}
  
-Jedoch hat sich im Daily-Standup mit dem Coach herausgestellt, dass machine learning nicht der richtige Lösungsansatz für die endliche Problemstellung der Piktogrammerkennung ist! 
+Jedoch hat sich im Daily-Standup mit dem Dozenten herausgestellt, dass machine learning nicht der richtige Lösungsansatz für die endliche Problemstellung der Piktogrammerkennung ist! 
 
-Da man lediglich fünf, bereits im Vorfeld bekannte Piktogramme erkennen muss, kann man das mit sogenanntem Template Matching\cite{OpenCV-Template-Matching} realisieren. Hierbei werden Inputdaten mit den verschiedenen Templates, in unserem Fall die fünf Piktogramme, abgeglichen. Dabei wird versucht die verschiedenen Templates in den Inputdaten zu erkennen. 
+Da man lediglich fünf, bereits im Vorfeld bekannte Piktogramme erkennen muss, kann man das mit sogenanntem Template Matching \cite{OpenCV-Template-Matching} realisieren. Hierbei werden Inputdaten mit den verschiedenen Templates, in unserem Fall die fünf Piktogramme, abgeglichen. Dabei wird versucht die verschiedenen Templates in den Inputdaten zu erkennen. 
 
 
 \subsection{Hindernisserkennung}
+\label{HindernisserkennungFunktinosmuster}
 
 Um die Treppe besteigen zu können, und nicht in die Hindernisse hineinzufahren, müssen
 diese zuerst erkannt werden. Wie bereits bei anderen Kompenenten wird auch hier versucht, so einfach wie möglich zu bleiben.
@@ -128,21 +130,28 @@ Unter der Annahme dass wir es bereits mit der fertigen Treppe zu tun haben
 und uns zuverlässig immer an der gleichen Stelle vor der Treppe
 aufstellen können, kann man bestimmte Ausschnitte aus dem Bild herausschneiden
 welche für die Hinderniserkennung relevant sind.
+
+Unter der Annahme, dass sich der Roboter an immer genau der gleichen stelle vor der Treppe positionieren kann,
+und sich die Konfiguration der Treppe nicht ändert, können die Treppenstufen vom Bild
+ausgeschnitten werden.
+
+
+
 \newpage
 
 \subsection{Orientierung auf der Treppenstufe}
 \label{orientierungAufTreppenstufe}
 Sobald sich der Roboter auf einer Treppenstufe befindet und ein Ziegelstein das Erklimmen der nächsten Stufe verhindert, muss dieser seitlich auf der Treppenstufe traversieren können. Bei dieser seitlichen Bewegung besteht das Risiko\footnote{Siehe Risikomanagement im Anhang}, dass der Roboter vom Kurs ab kommt und eine Treppenstufe runter stürzt.
-Deshalb ist geplant, die seitliche Bewegung mithilfe der Kamera zu kontrollieren. Somit ist es möglich einem Abkommen vom Kurs entgegen zu steuern.
+Deshalb ist geplant, die seitliche Bewegung mithilfe der Kamera zu kontrollieren. Somit ist es möglich, einem Abkommen vom Kurs rechtzeitig entgegen zu wirken.
 
 Mithilfe dieses Funktionsmusters soll geprüft werden, ob es möglich ist, mit Hilfe der Kamera die eigene Position auf der Treppenstufe zu erkennen und so auf Kurs zu bleiben. 
 
 \subsubsection{Testdaten}
-Zum Testen wurden verschiedene Bilder aus ca. 15 cm Höhe geschossen, welche das Blickfeld des Roboters beim Verschieben auf einer Treppenstufe simulieren sollen.
+Zum Testen werden verschiedene Bilder aus ungefähr 15 cm Höhe geschossen, welche das Blickfeld des Roboters beim Verschieben auf einer Treppenstufe simulieren sollen.
 
 \subsubsection{Aufbereitung der Bilder}
 \label{aufbereitungDerBilder}
-Um sich nun zu orientieren wurde versucht Kanten bzw. Linien in den Testdaten zu erkennen, welchen der Roboter folgen könnte. Um potentielle Kanten auszulesen, wurden folgende Verarbeitungsschritte angewandt:
+Um sich nun zu orientieren wird versucht Kanten und Linien in den Testdaten zu erkennen, welchen der Roboter folgen könnte. Um potentielle Kanten auszulesen, werden folgende Verarbeitungsschritte angewandt:
 \begin{enumerate}
     \item Verkleinerung
     \item In Graustufen konvertieren
@@ -152,21 +161,21 @@ Um sich nun zu orientieren wurde versucht Kanten bzw. Linien in den Testdaten zu
     \item Finden von Linien (Hough Transform)
     \item Zeichnen der Linien
 \end{enumerate}
-Für das erkennen der Kanten wurden zwei verschiedenen Techniken angewandt. Zum einen der Canny Edge Detection Algorithmus\cite{OpenCV-Canny}. Dieser Algorithmus erkennt Kanten auf einem Bild und färbt diese weiss ein. Je nach Justierung (mithilfe von zwei Parametern) werden mehr oder weniger Kanten erkannt.
+Für das erkennen der Kanten werden zwei verschiedenen Techniken angewandt. Zum einen der Canny Edge Detection Algorithmus\cite{OpenCV-Canny}. Dieser Algorithmus erkennt Kanten auf einem Bild und färbt diese weiss ein. Je nach Justierung (mithilfe von zwei Parametern) werden mehr oder weniger Kanten erkannt.
 \image
   {img/orientierung-treppenstufe/collageCanny.jpg}
   {Bilverarbeitungschritte des Funktionsmusters für die Orientierung auf einer Treppenstufe mit Edge Detection}
   
-Zum anderen wurde Gebrauch vom Thresholding Algorithmus\cite{OpenCV-Threshold} gemacht. Dieser Algorithmus setzt voraus, dass das Bild in Graustufenform vorliegt, weil somit das Bild nur noch eine Farbdimension (0-255) enthält. Sobald dies der Fall ist, werden alle Pixelwerte oberhalb der Grenze z.B. auf Schwarz und alle die unterhalb der Grenze liegen auf z.B. Weiss gefärbt. Die Grenze kann beim Funktionsaufruf als Parameter übergeben werden.
+Zum anderen wird Gebrauch vom Thresholding Algorithmus\cite{OpenCV-Threshold} gemacht. Dieser Algorithmus setzt voraus, dass das Bild in Graustufenform vorliegt, weil somit das Bild nur noch eine Farbdimension (0-255) enthält. Sobald dies der Fall ist, werden alle Pixelwerte oberhalb der Grenze z.B. auf Schwarz und alle die unterhalb der Grenze liegen auf z.B. Weiss gefärbt. Die Grenze kann beim Funktionsaufruf als Parameter übergeben werden.
 \image
   {img/orientierung-treppenstufe/collageThresh.jpg}
   {Bilverarbeitungschritte des Funktionsmusters für die Orientierung auf einer Treppenstufe mit thresholding}
   
 \subsubsection{Zeitmessung}
-Um ein Gefühl für die Laufzeit solcher Bildverarbeitungen und für die Laufzeit dieses Funktionsmusters zu entwickeln, wurden Zehn Zeitmessungen erstellt. Diese wurden auf einem Microsoft Surface Book 2 durchgeführt. Die effektive Laufzeit auf dem Zielsystem (Raspberry Pi) kann also stark variieren!
+Um ein Gefühl für die Laufzeit solcher Bildverarbeitungen und für die Laufzeit dieses Funktionsmusters zu entwickeln, werden zehn Zeitmessungen erstellt. Diese werden auf einem Microsoft Surface Book 2 durchgeführt. Die effektive Laufzeit auf dem Zielsystem (Raspberry Pi) kann also stark variieren.
 
 \begin{center}
-\begin{table}[ht!]
+\begin{table}[H]
     \begin{tabular}{l|l|l|l|l|l|l|l|l|l|l}
         \textbf{Durchlauf} & 1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 & 9 & 10 \\
         \textbf{Zeit [ms]} & 262.88 & 204.04 & 205.01 & 205 & 212.01 & 209.56 & 205 & 206 & 206.04 & 206 \\
@@ -176,21 +185,21 @@ Um ein Gefühl für die Laufzeit solcher Bildverarbeitungen und für die Laufzei
 \end{table}
 \end{center}
 
-Eine Raspberry Pi Kamera liefert 30 FPS. Somit wäre es nicht im entferntesten möglich die Positionsbestimmung auf jedem Frame durchzuführen. Hierfür müsste der Algorithmus stark optimiert werden. Eine Möglichkeit zur Optimierung wäre, die Maskierung bereits zu Beginn durchzuführen, wie im Kapitel \ref{aufbereitungDerBilder} (Aufbereitung der Bilder) kurz erwähnt.
+Eine Raspberry Pi Kamera liefert 30 Bilder pro Sekunde. Somit wäre es nicht im entferntesten möglich, die Positionsbestimmung auf jedem einzelnen Bild durchzuführen. Hierfür müsste der Algorithmus stark optimiert werden. Eine Möglichkeit zur Optimierung wäre, die Maskierung bereits zu Beginn durchzuführen, wie im Kapitel \ref{aufbereitungDerBilder} (Aufbereitung der Bilder) kurz erwähnt.
   
 \subsubsection{Fazit}
-Es ist möglich auf dieser Treppe mithilfe der Kamera sinnvolle Kanten auszulesen, welchen der Roboter dann folgen kann. Mit beiden verschiedenen Algorithmen (Canny Edge und Thresholding) wurden ähnliche Ergebnisse erzielt. Man konnte den Mittelpunkt der Treppe erkennen, an welchem sich der Roboter orientieren kann. Wenn sich dieser Mittelpunkt im Bild nach Rechts bewegt, ist dies ein Anzeichen dafür, dass der Roboter nach Links abdriftet und nach rechts gegensteuern muss. Anhand des Winkels der Mittelpunktgerade kann die Ausrichtung des Roboters überprüft werden. Wenn die Gerade nun z.B. einen Winkel von 60$^\circ$
- hat, weiss man, dass der Roboter 30$^\circ$ nach rechts geneigt auf der Treppe steht.
-Es ist noch nicht klar, welcher Algorithmus besser geeignet ist, es wäre allenfalls auch eine Kombination der beiden denkbar, um verschiedene Lichtverhältnisse besser abfangen zu können.
+Es ist möglich, auf dieser Treppe mithilfe der Kamera sinnvolle Kanten auszulesen, welchen der Roboter folgen kann. Mit beiden verschiedenen Algorithmen (Canny Edge und Thresholding) werden ähnliche Ergebnisse erzielt. Der Mittelpunkt der Treppe, an welchem sich der Roboter orientieren kann, wird erkannt. Wenn sich dieser Mittelpunkt im Bild nach Rechts bewegt, ist dies ein Anzeichen dafür, dass der Roboter nach Links abdriftet und nach rechts gegensteuern muss. Anhand des Winkels der Mittelpunktgerade kann die Ausrichtung des Roboters überprüft werden. Wenn die Gerade beispielsweise einen Winkel von 60$^\circ$
+ hat, ist bekannt, dass der Roboter 30$^\circ$ nach rechts geneigt auf der Treppe steht.
+Es ist noch nicht klar, welcher Algorithmus besser geeignet ist. Es wäre allenfalls auch eine Kombination der beiden denkbar, um verschiedene Lichtverhältnisse besser abfangen zu können.
 
 \newpage
 \subsection{Treppensteigen Prototyp 1}
-Das Lego-Mock-Up, das erstellt wurde, um die Hubbewegungen von Hand simulieren zu können, sollte dazu verwendet werden, die Hubbewegungen zu automatisieren. Es wurde nur eine Seite der Treppensteigkomponenten aufgebaut. 
+Das Lego-Mock-Up, das erstellt wurde, um die Hubbewegungen von Hand simulieren zu können, soll dazu verwendet werden, die Hubbewegungen zu automatisieren. Es wird nur eine Seite der Treppensteigkomponenten aufgebaut. 
 
-Der erste Prototyp diente dazu das Funktionsprinzip zu überprüfen. Es musste überprüft werden, ob die Standfüsse und die Verbindungsleisten unabhängig mit zwei Motoren gedreht werden können. 
+Der erste Prototyp diente dazu das Funktionsprinzip zu überprüfen. Es muss überprüft werden, ob die Standfüsse und die Verbindungsleisten unabhängig mit zwei Motoren gedreht werden können. 
 
 \subsubsection{Mechanische Komponenten}
-Das Lego-Mock-Up wurde für den Prototypenbau verkleinert, da der eingekaufte Modelbauzahnriemen nicht ganz den ersten Massabschätzungen entsprach. Die Zahnriemenräder wurden selber 3D-gedruckt. Das Antriebsrad konnte so direkt mit einem Zahnrad kommbiniert werden und in das Abtirebsrad konnte die Form einer Legowelle mitgedruckt werden. Der Grundkörper, die Standfüsse und die Verbindungsleisten wurden aus Legotechnik aufgebaut.\\
+Das Lego-Mock-Up wird für den Prototypenbau verkleinert, da der eingekaufte Modelbauzahnriemen nicht ganz den ersten Massabschätzungen entsprach. Die Zahnriemenräder werden selber 3D-gedruckt. Das Antriebsrad konnte so direkt mit einem Zahnrad kombiniert werden. Auch das Antriebsrad kann direkt mit einer Legowelle gedruckt werden. Der Grundkörper, die Standfüsse und die Verbindungsleisten werden aus Legotechnik aufgebaut.\\
 
 \begin{figure}[H]
   \includegraphics[width=0.6\textwidth]{img/Zahnrad gedruckt.JPG}
@@ -208,26 +217,19 @@ Das Lego-Mock-Up wurde für den Prototypenbau verkleinert, da der eingekaufte Mo
 Um die Bewegung der Arme ausführen zu können, werden zwei Getriebemotoren verwendet. Diese Motoren werden durch eine H-Brücke angesteuert. Die Steuerung übernimmt ein Raspberry Pi 4.
 
 \begin{figure}[H]
-  \includegraphics[width=0.6\textwidth]{img/Funktionsmuster Treppensteigen/Elektrische_Kompnenten.png}
+  \includegraphics[width=\textwidth]{img/Funktionsmuster Treppensteigen/GUI.png}
   \centering
-  \caption{Elektrische Komponenten des Prototyps}
+  \caption{GUI und Elektrische Komponenten des Prototyps}
 \end{figure}
 
 \newpage
 
 Um die Geschwindigkeit der Motoren individuell anpassen zu können, generiert der Raspberry Pi ein PWM-Signal für die H-Brücke. Dieses PWM-Signal kann in einem GUI mittels Slider von 0 bis 100\% verstellt werden. 
-
-\begin{figure}[H]
-  \includegraphics[width=0.6\textwidth]{img/Funktionsmuster Treppensteigen/GUI_Prototyp.png}
-  \centering
-  \caption{GUI der Steuerung des Prototyps}
-\end{figure}
-
 Des Weiteren hat man die Möglichkeit auf dem GUI die Drehrichtung der einzelnen Motoren nach links und nach rechts zu wählen, sowie einzeln zu stoppen.
 
 \subsubsection{Test}
 
-Es wurde geprüft, ob sich der Standfuss mit dem Zahnriemen drehen lässt und ob mit dem zweiten Motor die Verbindungsleiste gedreht werden kann. Diese Versuche wurden zuerst einzeln gemacht, um die jeweilige Funktion zu testen. Zum Schluss wurde noch probiert mit der Verbindungsleiste eine Umdrehung zu machen und dabei den Standfuss horizontal zu halten.
+Es wird geprüft, ob sich der Standfuss mit dem Zahnriemen drehen lässt und ob mit dem zweiten Motor die Verbindungsleiste gedreht werden kann. Diese Versuche werden zuerst einzeln gemacht, um die jeweilige Funktion zu testen. Zum Schluss wird noch versucht, mit der Verbindungsleiste eine Umdrehung zu machen und dabei den Standfuss horizontal zu halten.
 
 \begin{figure}[H]
   \includegraphics[width=0.8\textwidth]{img/Testversuch.png}
@@ -240,7 +242,7 @@ Es wurde geprüft, ob sich der Standfuss mit dem Zahnriemen drehen lässt und ob
 Mit diesem Prototypen sollten die Hubbewegungen automatisiert werden. Dies ist so nicht gelungen, jedoch konnte mit dem Prototyp das Funktionsprinzip überprüft werden.
 
 
-Nach den ersten Tests wird klar, dass das Funktionsprinzip funktioniert. Es gilt jedoch einige Faktoren zu beachten. Die grösste Erkenntnis beim Bau des Prototypen war, dass zwei Motoren notwendig sind. Je ein Motor wird für eine Drehung in einer Achse benötigt. Diese Motoren treiben beide Seiten synchron an. Die Kraftübertragung wurde mithilfe des Prototyps getestet.
+Nach den ersten Tests wird klar, dass das Funktionsprinzip funktioniert. Es gilt jedoch einige Faktoren zu beachten. Die grösste Erkenntnis beim Bau des Prototypen ist, dass zwei Motoren notwendig sind. Je ein Motor wird für eine Drehung einer Achse benötigt. Diese Motoren treiben beide Seiten synchron an. Die Kraftübertragung wurde mithilfe des Prototyps getestet.
 
 Der Bau des Prototypen für das Treppensteigen war wichtig und hat geholfen das Funktionsprinzip aufzubauen und zu verstehen.
 
@@ -248,7 +250,7 @@ Der Bau des Prototypen für das Treppensteigen war wichtig und hat geholfen das 
 
 \subsection{Treppensteigen Prototyp 2}
 
-Da mit dem ersten Prototypen nur das Funktionsprinzip überprüft werden konnte, brauchte es einen zweiten Prototypen um die erste Hubbewegung zu simulieren, da sie die wichtigste Hubbewegung beim besteigen der Treppe ist. Es galt zu überprüfen, ob die erste Hubbewegung überhaupt machbar ist.
+Da mit dem ersten Prototypen nur das Funktionsprinzip überprüft werden konnte, brauchte es einen zweiten Prototypen um die erste Hubbewegung zu simulieren, da sie die wichtigste Hubbewegung beim besteigen der Treppe ist. Es gilt zu überprüfen, ob die erste Hubbewegung überhaupt machbar ist.
 
 \begin{figure}[H]
   \includegraphics[width=0.8\textwidth]{img/Test 1. Hub.png}
@@ -258,17 +260,15 @@ Da mit dem ersten Prototypen nur das Funktionsprinzip überprüft werden konnte,
 
 \subsubsection{Fazit}
 
-Es konnte gezeigt werden, dass die erste Hubbewegung umsetzbar ist. Die Bewegung funktioniert mit dem Zahnriemen für die Kraftübertragung.
+Es konnte gezeigt werden, dass die erste Hubbewegung umsetzbar ist. Die Bewegung funktioniert mit dem Zahnriemen als Kraftübertragung.
 
+\newpage
 \subsection{Fortbewegung Prototyp}
+Für die Fortbewegung und Navigation des Roboters werden zwei voneinander unabhängige drehbare Räder verwendet. Damit der Grundkörper gerade liegt und nicht den Boden berührt, werden gegenüber der Räder zwei Halbkugelstützen verbaut.
+Dieses System wurde gewählt, da es extrem simpel ist und der Roboter sich auf einem Punkt drehen kann.
 
-Für die Fortbewegung und Navigation unseres Roboters haben wir uns dafür entschieden zwei
-voneinander Unabhängige Räder mit zwei Halbkugelstützen zu implementieren. 
-Wir haben uns vor allem für dieses Prinzip entschieden, da es sehr simpel ist und man 
-sich auf der Stelle drehen kann. 
-
-Um die Funktionsweise für die Fortbewegung zu zeigen und erste Tests für Drehungen auf
-der Treppe zu zeigen, haben wir einen Prototzpen mit Lego Mindstorms \footnote{https://en.wikipedia.org/wiki/Lego_Mindstorms}
+Um die Funktionsweise für die Fortbewegung zu demonstrieren und erste Tests für Drehungen auf
+der Treppe durchzuführen, wird ein Prototyp mithilfe von Lego Mindstorms \footnote{https://en.wikipedia.org/wiki/Lego\_Mindstorms}
 gebaut.
 
 \image

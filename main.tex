@@ -4,7 +4,7 @@
 \author{
 \begin{tabular}{ l l }
   Burch Sven & <sven.burch@stud.hslu.ch> \\
-  Fassbind Benjamin & <benjamin.fassbind@stud.hslu.ch> \\
+  Fassbind Benjamin & <benjamin.fassbind@stud.hslu.ch \\
   Jacob Yves & <yves.jacob@stud.hslu.ch> \\
   Meier Boas & <boas.meier@stud.hslu.ch> \\
   Paradiso Simone & <simone.paradiso@stud.hslu.ch> \\
@@ -34,6 +34,9 @@
     {Hochschule Luzern, Gruppe 5}
     {\theauthor}
 
+  \subfile{parts/management_summary.tex}
+  
+  \newpage
   \addtableofcontents
   
   \newpage
@@ -48,8 +51,9 @@
 
   % ------------------------------------------------------------------------------
   % Assemble the document with the multiple parts
-
+  
   \subfile{parts/0-doc-info}
+  \subfile{parts/0-einleitung}
   \subfile{parts/1-aufgabenstellung}
   \subfile{parts/2-vorgehen}
   \subfile{parts/3-technologierecherche}
