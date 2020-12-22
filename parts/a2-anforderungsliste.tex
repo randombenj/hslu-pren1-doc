@@ -1,47 +1,6 @@
-\section{Aufgabenstellung}
-
-Das Ziel der \acrfull{pren} 1 und 2 ist das Planen und Verwirklichen eines vollkommen autonomen Roboters. Die Anforderungen an diesen Roboter werden anschliessend vereinfacht behandelt. 
-
-\image
- {img/Aufgabenstellung}
- {Skizzierung der Treppe}
- 
-Das Team hat zwei Minuten, um den Roboter auf dem Spielfeld in dem 40x40cm grossen 
-Startfeld zu positionieren und letzte Vorkehrungen zu treffen. 
-Danach wird der Roboter mittels eines einzelnen Tasters gestartet. 
-Für alle folgenden Aufgaben hat er maximal vier Minuten zur Verfügung. 
-Die autonome Maschine sucht zuerst im Startbereich ein Piktogramm, welches zufällig aus 5 möglichen Piktogrammen ausgewählt wurde. 
-
-Hat der Roboter dieses Bild gefunden, bestätigt er dies dem Publikum. 
-Nun muss die Treppe erklimmt werden. Um die Aufgabe zusätzlich zu erschweren,
-werden auf der Treppe zufällig 2 verschiedene Ziegelsteinarten positioniert, welche der Roboter selbständig um- oder überfahren soll, ohne diese zu verschieben.
-Ist die obere Plattform erreicht, steht der Roboter vor dem letzten Teil der Aufgabe. 
-Aus allen 5 verfügbaren, aufgestellten Piktogrammen muss die Kopie jenes aus dem 
-Startbereich gefunden werden. Wurde das richtige identifiziert, 
-muss dies wiederum signalisiert werden. Das Team darf,
-wenn der Roboter einmal gestartet ist, 
-keinen Einfluss mehr auf das Geschehen nehmen und hat maximal 2 solcher Durchläufe 
-um die Aufgabe zu bewältigen. Für diese Aufgaben darf die Maschine nicht mehr 
-als 100cm vom Boden abheben oder das Geländer zur Hilfe nehmen. 
-Eine Fortbewegung mittels Ketten- oder Raupenantriebes ist ebenfalls nicht erlaubt.
-
-Nachfolgend ist die Treppe von der Startfläche aus verschiedenen Höhen zu sehen, um einen Eindruck zu verleihen, wie der Roboter die Aufgabenstellung sieht.
-
-\image
-  {img/Boden}
-  {Die Treppe vom Boden des Starbereiches aus}
- 
-\image
- {img/500mm}
- {Die Treppe mit dem Betrachter auf 0.5m Höhe}
- 
-\image
- {img/1000mm}
- {Treppe mit dem Betrachter auf 1m Höhe}
-
-\subsection{Anforderungsliste}
+\section*{Anforderungsliste}
 \label{sec:anforderungsliste}
-
+Die nachfolgende Tabelle \ref{tab:anforderungsliste} listet alle Anforderungen an den autonomen Baugerüstroboter auf. Hierbei wird zwischen Fest-, Mindest- und Wunschanforderungen unterschieden. Weiter werden die Anforderungen in Funktionelle und nicht Funktionelle unterteilt. Zudem wurden den Anforderungen eine Priorität und ein Komplexitäts-Level zugeteilt. Hierbei entspricht eine 1 dem höchsten Wert. Z.B. wurde der Anforderung autonomes Fahren die Priorität 1 als auch die Komplexität 1 zugeordnet. Das heisst, es hat höchste Priorität und höchste Komplexität.
 \begin{items}
   \item {\bf F} = Festanforderung
   \item {\bf M} = Mindestanforderung
@@ -142,6 +101,7 @@ funktionell\tabularnewline
 1.23 & W & 3 & Not-Aus-Taster & Das Gerät soll mit einem Not-Aus Taster
 sofort gestoppt werden können. & E / I & 3 & funktionell\tabularnewline
 \caption{Anforderungskatalog}
+\label{tab:anforderungsliste}
 %\bottomrule
 \end{longtable}
 \normalsize

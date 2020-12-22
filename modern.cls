@@ -327,9 +327,10 @@
 \definecolor{thead-row-color}{HTML}{FFFFFF}
 \definecolor{white}{HTML}{FFFFFF}
 \definecolor{red}{HTML}{FFBEAB}
+\definecolor{black}{HTML}{000000}
 
 % Border Color
-\arrayrulecolor{white}
+\arrayrulecolor{black}
 
 \renewcommand*{\arraystretch}{1.4}
 %\renewcommand*{\midrule}{}

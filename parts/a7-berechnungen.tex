@@ -1,14 +1,4 @@
-\sectino*{Anhang}
-
-\subsubsection{Aufgabenstellung original}
-
-\includepdf[
-  pages={1-},
-  scale=1,
-  pagecommand={\pagestyle{fancy}}
-]{assets/Aufgabenstellung_PREN1_H20_v1_2.pdf}
-
-\subsubsection{Berechnungen}
+\section*{Berechnungen}
 
 \textbf{Abmasse}
 
@@ -47,14 +37,24 @@ Schwerpunkt Zusatzmasse: 180 mm
 
 Schwerpunkt Grundkörper: 105.2 mm
 
-Bild CAD
+\begin{figure}[H]
+  \includegraphics[width=0.8
+  \textwidth]{img/Treppensteigen/SP Grundkörper final.png}
+  \centering
+  \caption{Grundkörper}
+\end{figure}
 
 \textbf{Standfüsse}
 
 Masse Standfuss: 0.51 kg
 Schwerpunkt Standfuss: 184.8 mm
 
-Bild CAD
+\begin{figure}[H]
+  \includegraphics[width=0.8
+  \textwidth]{img/Treppensteigen/SP Standfuss final.png}
+  \centering
+  \caption{Standfuss}
+\end{figure}
 
 \textbf{Verbindungsleisten}
 
@@ -63,7 +63,12 @@ Der Schwerpunkt der Verbindungsleisten wurde mittig gesetzt, um die Schwerpunkts
 Masse Verbindungsleisten: 0.18 kg
 Schwerpunkt Verbindungsleisten: 140 mm
 
-Bild CAD
+\begin{figure}[H]
+  \includegraphics[width=0.8
+  \textwidth]{img/Treppensteigen/SP Verbindungsleiste final.png}
+  \centering
+  \caption{Verbindungsleiste}
+\end{figure}
 
 \textbf{Notwendige Momente bei den Hubbewegungen}
 
@@ -107,38 +112,10 @@ Drehachse 2: grösstes Moment, wenn Standfüsse horizontal
     &=\underline{\underline{0.6\ Nm}}
 \end{align*}
 
-Motor 1 liefert das Moment, dass in der 1. Drehachse wirkt und Motor 2 liefert das Moment, dass in der 2. Drehachse wirkt.\\
+Motor 1 liefert das Moment, dass in der 2. Drehachse wirkt und Motor 2 liefert das Moment, dass in der 1. Drehachse wirkt.\\
 \\
-M$_{erforderlich}$ Achse 1: 5 Nm\\
+M$_{erforderlich}$ Achse 1: 2.4 Nm\\
 
-M$_{erforderlich}$ Achse 2: 2.4 Nm
+M$_{erforderlich}$ Achse 2: 5.4 Nm verteilt auf zwei Seiten
 
-
-
-
-
-\subsection*{Detailrecherche}
-
-\includepdf[
-  pages={1-},
-  scale=1,
-  pagecommand={\pagestyle{fancy}}
-]{assets/Technologierecherche M.pdf}
-
-\includepdf[
-  pages={1-},
-  scale=1,
-  pagecommand={\pagestyle{fancy}}
-]{assets/Technologierecherche ET.pdf}
-
-\includepdf[
-  pages={1-},
-  scale=1,
-  pagecommand={\pagestyle{fancy}}
-]{assets/Recherche Auftragsquittierung.pdf}
-
-\includepdf[
-  pages={1-},
-  scale=1,
-  pagecommand={\pagestyle{fancy}}
-]{assets/Recherche Umgebungserkennung.pdf}
+M$_{erforderlich}$ Achse 2 pro Seite: 2.7 Nm

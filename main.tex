@@ -1,5 +1,5 @@
-\documentclass[oneside]{modern}
 
+\documentclass[oneside]{modern}
 \title{Produktentwicklung 1}
 \author{
 \begin{tabular}{ l l }
@@ -12,6 +12,7 @@
 \end{tabular}
 }
 \date{\today}
+
 
 \begin{document}
 
@@ -53,14 +54,12 @@
   % Assemble the document with the multiple parts
   
   \subfile{parts/0-doc-info}
-  \subfile{parts/0-einleitung}
-  \subfile{parts/1-aufgabenstellung}
-  \subfile{parts/2-vorgehen}
-  \subfile{parts/3-technologierecherche}
-  \subfile{parts/4-erste-evaluation}
-  \subfile{parts/5-zweite-evaluation}
-  \subfile{parts/6-teilkonzepte}
-  \subfile{parts/7-funktionsmuster}
+  \subfile{parts/1-einleitung}
+  \subfile{parts/2-aufgabenstellung}
+  \subfile{parts/3-konzept}
+  \subfile{parts/4-funktionsmuster}
+  \subfile{parts/5-vorgehen}
+  \subfile{parts/6-schlussdiskussion}
 
   \newpage
   \addglossary
@@ -75,7 +74,7 @@
     heading=subbibliography
   ]
   
-  %\begin{comment}\subfile{parts/Anhang}
-  %\end{comment}
+\subfile{parts/anhang}
+
 
 \end{document}

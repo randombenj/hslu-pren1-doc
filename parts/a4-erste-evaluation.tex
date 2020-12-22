@@ -1,5 +1,4 @@
-\section{Erste Evaluation}
-
+\section*{Erste Evaluation}
 Für den ersten Evaluationsschritt werden Killerkriterien formuliert, welche aus der Anforderungsliste und der Aufgabestellung abgeleitet werden. Es soll eine Erstevaluation durchgeführt werden, um die vielen recherchierten Lösungsmöglichkeiten einzugrenzen. Die verbleibenden, möglichen Teillösungen werden anschliessend in einem morphologischen Kasten zusammengetragen. Mit dem morphologischen Kasten werden die Teillösungen zu mehreren Gesamtlösungen kombiniert. Diese Gesamtlösungen werden dann in einem zweiten Evaluationsschritt mit einer Nutzwertanalyse bewertet.
 
 In einem ersten Schritt werden Killerkriterien erstellt, auf welche sich die nachfolgenden Evaluationen beziehen:
@@ -24,12 +23,11 @@ In einem ersten Schritt werden Killerkriterien erstellt, auf welche sich die nac
 
 
 
-\subsection{Mechanisch}
-
+\subsection*{Fortbewegung und Treppensteigen}
 \textbf{Ausgeschiedene Teilfunktionen}
-
+In der Tabelle \ref{tab:ausgeschiedene-teilfunktionen-fortbewegung} werden die ausgeschiedenen Teilfunktionen in der Fortbewegung, Lenkung und im Treppensteigen rot markiert. In der nächsten Tabelle \ref{tab:ausgeschiedene-teilfunktionen-hindernisse}, werden die ausgeschiedenen Lösungsmöglichkeiten, um Hindernisse zu überwinden rot eingefärbt. 
 \begin{center}
-\begin{table}[h!]
+\begin{table}[ht!]
     \begin{tabular}{l|l|l}
         \textbf{Fortbewegung} & \textbf{Treppensteigen} & \textbf{Lenkung} \\
         Normale Räder & Spezielle Treppenräder & Lenkachse \\
@@ -42,8 +40,8 @@ In einem ersten Schritt werden Killerkriterien erstellt, auf welche sich die nac
          & \cellcolor{red}Schlange mit Magneten & \\
     \end{tabular}
     \caption{Teilfunktionen Mechanik 1}
-\end{table}
-\end{center}
+    \label{tab:ausgeschiedene-teilfunktionen-fortbewegung}
+\end{table}\end{center}
 
 \begin{center}
 \begin{table}[h!]
@@ -55,6 +53,7 @@ In einem ersten Schritt werden Killerkriterien erstellt, auf welche sich die nac
         \cellcolor{red}Besteigen\\
     \end{tabular}
     \caption{Teilfunktionen Mechanik 2}
+    \label{tab:ausgeschiedene-teilfunktionen-hindernisse}
 \end{table}
 \end{center}
 
@@ -78,7 +77,7 @@ Teilfunktion Hindernisse überwinden:
  \end{itemize}
 
 \textbf{Verbleibende Teillösungen für die zweite Evaluation}
-
+Die Tabelle \ref{tab:verbleibende-teillösungen-mechanik-1} und die Tabelle \ref{tab:verbleibende-teillösungen-mechanik-2} zeigen die noch verbleibenden Teillösungen für die zweite Evaluation.
 \begin{center}
 \begin{table}[h!]
     \begin{tabular}{l|l|l}
@@ -90,6 +89,7 @@ Teilfunktion Hindernisse überwinden:
         Beine & Sprungfeder &\\
     \end{tabular}
     \caption{Verbleibende Lösungen Mechanik 1 nach der ersten Evaluation}
+    \label{tab:verbleibende-teillösungen-mechanik-1}
 \end{table}
 \end{center}
 
@@ -100,13 +100,13 @@ Teilfunktion Hindernisse überwinden:
         Umgehen
     \end{tabular}
     \caption{Verbleibende Lösungen Mechanik 2 nach der ersten Evaluation}
+    \label{tab:verbleibende-teillösungen-mechanik-2}
 \end{table}
 \end{center}
 \newpage
 
 
-\subsection{Elektrotechnische Bauteile}
-
+\subsection*{Sensoren und Stromversorgung}
 \textbf{Ausgeschiedene Lösungsmöglichkeiten}
 
 Orientierung
@@ -129,6 +129,7 @@ Energiequelle
 \end{itemize}
 
 \textbf{Verbleibende Lösungen für die zweite Evaluation}
+Die Tabelle \ref{tab:verbleibende-teillösungen-elektrotechnik} zeigen die noch verbleibenden Teillösungen im Bereich Sensoren und Stromversorgung für die zweite Evaluation.
 \begin{center}
 \begin{table}[h!]
     \begin{tabular}{l|l|l|l}
@@ -141,12 +142,13 @@ Energiequelle
         Beschleunigungssensor & Getriebemotor & & 
     \end{tabular}
     \caption{Verbleibende Lösungen Elektrotechnik nach der ersten Evaluation}
+    \label{tab:verbleibende-teillösungen-elektrotechnik}
 \end{table}
 \end{center}
 
 
 \newpage
-\subsection{Auftragsquittierung}
+\subsection*{Auftragsquittierung}
 
 \textbf{Ausgeschiedene Lösungsmöglichkeiten} 
 
@@ -168,7 +170,7 @@ Word Vorlesefunktion + Lautsprecher:
     \item LED's
 \end{itemize}
 
-\subsection{Umgebungserkennung}
+\subsection*{Umgebungserkennung}
 \textbf{Ausgeschiedene Lösungsmöglichkeiten}
 
 Google Vision API:
@@ -190,19 +192,3 @@ CognitiveJ - Image Analysis mit Java:
     \item Scikit Image
 \end{itemize}
 
-\subsection{\acrshort{lofi} Prototypen}
-
-Um ein erstes Gefühl dafür zu bekommen, ob eine Idee funktionieren kann, eignet es 
-sich einen \acrfull{lofi} Prototypen zu bauen, um die Funktionsweise
-des \glqq Frosch\grqq{} Prinzips für das Treppensteigen zu testen.
-
-Als erstes wird geprüft, ob die Idee umsetzbar ist.
-Eine Unsicherheit dabei ist der Schwerpunkt und ob das Modell kippt
-bevor es die Treppenstufe erreicht. Ein erstes Kartonmodell zeigt,
-dass die Treppe so bestiegen werden könnte.
-
-In einer nächsten Evaluation soll das Prinzip in einem 1:1 Prototypen veranschaulicht und realisiert werden.
-
-\image
- {img/frosch.png}
- {Treppensteigen mit dem "Frosch" prinzip}

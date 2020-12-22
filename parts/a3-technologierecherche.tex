@@ -1,10 +1,20 @@
- \section{Technologierecherche}
-
-\subsection{Überblick}
-Nachfolgend ist ein kurzer Überblick über die Technologierecherche in Tabellenform. Für die detaillierte Technologierecherche siehe Anhang: Abschnitt Detailrecherche.
-
-
-
+\newpage
+\section*{Technologierecherche}
+Zu Beginn der Recherchephase wurde der Roboter anhand der Anforderungsliste in einzelne Teilfunktionen zerlegt. Somit konnte der Vorgang der Recherche besser paralleilisert werden und es ist eifacher die Übersicht zu behalten (Divide et impera). Die folgenden Teilfunktionen tauchen in der gesamten Dokumentation immer wieder auf:
+\begin{itemize}
+    \item Fortbewegung
+    \item Lenkung
+    \item Treppensteigen
+    \item Orientierung
+    \item Bilderkennung
+    \item Auftragsquittierung
+    \item Antrieb
+    \item Not-Aus
+    \item Energiequelle
+    \item Steuerung
+\end{itemize}
+\subsection*{Überblick}
+Nachfolgend ist ein kurzer Überblick über die Technologierecherche in Tabellenform (siehe Tabelle \ref{tab:technologierecherche}). Für die detaillierte Technologierecherche siehe Anhang: Abschnitt Detailrecherche.
 
 \scriptsize
 \begin{longtable}{l@{\extracolsep{\fill}}p{2cm}p{2cm}p{4cm}p{3cm}lll}
@@ -717,7 +727,33 @@ Bildverarbeitung &
 \tiny\url{https://elektro.turanis.de/html/prj176/index.html} & 05.10.2020 &
 Yves\tabularnewline
 \caption{Technologierecherche Übersicht}
+\label{tab:technologierecherche}
 \end{longtable}
-
 \normalsize
+
+\subsection*{Detailrecherche}
+Nachfolgend werden alle Komponenten, welche in der Übersichtstabelle \ref{tab:technologierecherche} aufgelistet wurden, kurz anhand eines Bildes vorgestellt. Zudem wurden für jede Komponente Vor- und Nachteile aufgelistet.
+\includepdf[
+  pages={1-},
+  scale=1,
+  pagecommand={\pagestyle{fancy}}
+]{assets/Technologierecherche M.pdf}
+
+\includepdf[
+  pages={1-},
+  scale=1,
+  pagecommand={\pagestyle{fancy}}
+]{assets/Technologierecherche ET.pdf}
+
+\includepdf[
+  pages={1-},
+  scale=1,
+  pagecommand={\pagestyle{fancy}}
+]{assets/Recherche Auftragsquittierung.pdf}
+
+\includepdf[
+  pages={1-},
+  scale=1,
+  pagecommand={\pagestyle{fancy}}
+]{assets/Recherche Umgebungserkennung.pdf}
 

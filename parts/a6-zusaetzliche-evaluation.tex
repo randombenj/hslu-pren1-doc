@@ -1,0 +1,73 @@
+\section*{Zusätzliche Evaluation}\label{ausrichtung-zur-treppe-evaluation}
+Um eine Treppenstufe erfolgreich erklimmen zu können, muss der Roboter genau senkrecht zur Treppe stehen. Um dies zu gewährleisten stehen folgende Möglichkeiten zur Verfügung:
+\begin{enumerate}
+    \item \textbf{Tastsensor}\\
+    Der Roboter ist mit zwei Tastsensoren ausgestattet, welche sich auf gleicher Höhe mit der Stufe befinden. Diese triggern sobald der Roboter genügend stark gegen die Treppe fährt. Der Roboter fährt so lange gegen die Treppe, bis beide Tastsensoren detektieren. Über den Tastsensoren soll ein Puffer befestigt werden, damit die Kraft präziser übertragen wird.
+    
+    \textbf{Vorteile}
+    \begin{itemize}
+        \item Bereits für sehr wenig Geld erhältlich.
+        \item Sehr simpel
+    \end{itemize}
+    \textbf{Nachteile}
+    \begin{itemize}
+        \item Eine fixe Schwelle der Kraft, welche aufgewendet werden muss, damit der Taster detektiert.
+        \item Muss sich genau auf der Höhe der Treppenstufe befinden.
+    \end{itemize}
+    
+    \item \textbf{Kraftsensor}\\
+    Mit den Kraftsensoren wird das selbe Prinzip wie mit den Tastsensoren verfolgt. Der Vorteil hierbei ist, dass diese im Gegensatz zu den Tastsensoren schon sehr schwache Kollisionen mit der Treppenstufe detektieren. Somit wird mit einer höheren Genauigkeit gerechnet. Wobei sie preislich etwas teurer sind.
+    
+    \textbf{Vorteile}
+    \begin{itemize}
+        \item Detektieren bereits sehr schwache Kollisionen.
+    \end{itemize}
+    \textbf{Nachteile}
+    \begin{itemize}
+        \item Sind teurer als die Tastsensoren.
+        \item Muss sich genau auf der Höhe der Treppenstufe befinden.
+    \end{itemize}
+    
+    \item \textbf{Tast- oder Kraftsensoren mit ausfahrbaren Fühler}\\
+    Der Roboter darf sich jedoch nicht unmittelbar vor der Treppenstufe befinden, um die Hubbewegung durchzuführen (siehe \ref{sec:hubbewegung-analyse}), da die Treppenstufe sonst im Weg steht. Somit kann der Roboter Fühler ausfahren, an welchen die Tast- bzw. Kraftsensoren befestigt sind, welche den Roboter genau auf der richtigen Distanz halten. Die Fühler werden vor der Hubbewegung ein wenig eingefahren, so dass die Treppe nicht mehr blockiert.
+    
+    \textbf{Vorteile}
+    \begin{itemize}
+        \item Der Roboter kann einfach gegen die Treppe fahren und richtet sich so automatisch senkrecht aus.
+    \end{itemize}
+    \textbf{Nachteile}
+    \begin{itemize}
+        \item Auwändig und teuer
+        \item KISS-Prinzip nicht eingehalten
+        \item Genauigkeit sehr von der verwendeten Technologie (z.B. Servo) fürs Einfahren der Fühler
+        abhängig. 
+        \item Muss sich genau auf der Höhe der Treppenstufe befinden.
+    \end{itemize}
+    
+    \item \textbf{Zwei Kameras}\\
+    Mithilfe von zwei unabhängigen Kameras sollen die Diszanzen zur Treppe gemessen werden. Wenn beide Distanzen gleich sind, steht der Roboter senkrecht zur Treppe.
+    
+    \textbf{Vorteile}
+    \begin{itemize}
+        \item Die Kameras müssen sich nicht auf gleicher Höhe wie die Treppenstufe befinden.
+    \end{itemize}
+    \textbf{Nachteile}
+    \begin{itemize}
+        \item Komplex
+        \item Ungenau
+        \item Preis
+    \end{itemize}
+    
+    \item \textbf{Distanzsensoren}\\
+    Mit den Distanzsensoren wird das selbe Prinzip wie mit den Kameras verfolgt. Sie sollen die Distanz zur nächsten Treppenstufe messen.
+    
+    \textbf{Vorteile}
+    \begin{itemize}
+        \item Günstig
+    \end{itemize}
+    \textbf{Nachteile}
+    \begin{itemize}
+        \item Muss sich genau auf der Höhe der Treppenstufe befinden.
+    \end{itemize}
+\end{enumerate}
+\textbf{Fazit:} Die Tastsensoren und Kraftsensoren fallen raus, aufgrund der Hubbewegung. Die ausfahrbaren Fühler fallen aufgrund des Entwicklungsaufwandes heraus. Die zwei Kameras aufgrund des Preises, der Komplexität und der ungenügenden Genauigkeit. Der Roboter wird also mit zwei Distanzsensoren ausgestatten, mit welchen die Ausrichtung zur Treppe sichergestellt werden kann.
