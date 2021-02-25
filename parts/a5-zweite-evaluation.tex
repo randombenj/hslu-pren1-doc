@@ -1,5 +1,5 @@
 \newpage
-\section*{Zweite Evaluation}
+\section{Zweite Evaluation}
 In der zweiten Evaluation werden drei Lösungsvarianten in einem morphologischen Kasten dargestellt. Anschliessend werden diese Lösungsvarianten in einer Nutzwertanalyse bewertet.
 \subsection*{Morphologischer Kasten}
 In der ersten Phase der zweiten Evaluation werden die Ergebnisse der ersten Evaluation in einem morphologischen Kasten zusammengefasst. Mithilfe dieses morphologischen Kastens werden drei mögliche Lösungskonzepte zusammengestellt. Hierbei wird sich an der Teilfunktion ``Treppensteigen'' orientiert. Nach dem ersten Schritt, werden die restlichen Komponenten hinzugefügt. Die Hauptunterschiede dieser drei möglichen Lösungskonzepte (Frosch, 3-teiliger Hebemechanismus, Spinne) liegen bei den Teilfunktionen: Treppensteigen, Lenkung und Fortbewegung.
@@ -19,7 +19,7 @@ Für die  Steuerung der Software als auch der Hardware wird ein Raspberry Pi ver
 Da die Funktionen mehrheitlich vom Treppensteigen-Mechanismus abhängig sind, ergeben sich das Zugmittelgetriebe, Akku und Elektromotoren selbsterklärend. 
 
 \subsubsection*{3-Teilige Hebemaschine}
-\begin{figure}[h]
+\begin{figure}[H]
   \includegraphics[width=1.0\textwidth]{img/morphologische-kaesten/Morphologischer_Kasten_Hebe}
   \centering
   \caption{Pfad der Lösungskombination Hebemaschine durch den Morphologischen Kasten}
@@ -29,7 +29,6 @@ Da die Funktionen mehrheitlich vom Treppensteigen-Mechanismus abhängig sind, er
 Bei der Variante 2 (siehe Abbildung \ref{fig:morphologischer-kasten-3teiler}), geht es um eine 3-Teilige Hebemaschine, welche sich sektionsweise hebt, um auf die nächste Stufe zu gelangen. Aufgrund der zu erwartenden Grösse, wird ein Omnidrive-Fahrdrehmodul eingeplant. Somit kann sich der Roboter um die Hindernisse herum verschieben, ohne sich um seine eigene Achse drehen zu müssen. Um die Treppenstufen zu erklimmen wird ein Hebemechanismus verwendet, welche zwingend Getriebe und Elektromotoren voraussetzt.
 
 \subsubsection*{Spinne}
-\subsubsection*{3-Teilige Hebemaschine}
 \begin{figure}[h]
   \includegraphics[width=1.0\textwidth]{img/morphologische-kaesten/Morphologischer_Kasten_Spinne.png}
   \centering
@@ -119,18 +118,22 @@ Aufgrund der Auswertung der nachfolgenden Nutzwertanalyse wird die Variante 1, `
 Aufgrund der Bewertungen dieser Nutzwertanalyse, wird die Variante 2, ``3-Teiler'', als Notfallplan definiert. Falls es im weiteren Verlauf grundlegende Probleme mit der ersten Wahl geben sollte, welche nicht behoben werden können, wird auf diese Variante ausgewichen.
 
 \subsection*{Komponenten Übersicht der gewählten Lösungskombinationen}
-Nachfolgend ist eine Übersicht der Komponenten des erst- und zweitplatzierten Lösungskonzept zu sehen. Für das erstplazierte Lösungskonzept wurde eine Skizze zu den Teilfunktionen ``Treppensteigen'' und ``Fortbewegung'' erstellt.
+Nachfolgend ist eine Übersicht der Komponenten des erst- und zweitplatzierten Lösungskonzept zu sehen. Für das erstplazierte Lösungskonzept wurde eine Skizze (siehe Abbildung \ref{fig:Frosch-Treppensteigfunktion}) zu den Teilfunktionen ``Treppensteigen'' und ``Fortbewegung'' erstellt.
 
 \vspace{2cm}
 
-\image
-   {img/Skizze Frosch.png}
-   {Skizze Treppensteigfunktion und Fortbewegung des Frosches}
+\begin{figure}[H]
+  \includegraphics[width=0.8\textwidth]{img/Skizze Frosch.png}
+  \centering
+  \caption{Skizze Treppensteigfunktion und Fortbewegung des Frosches}
+  \label{fig:Frosch-Treppensteigfunktion}
+\end{figure}
+
 
 \subsection*{\acrshort{lofi} Prototypen}
 Um ein erstes Gefühl dafür zu bekommen, ob eine Idee funktionieren kann, eignet es 
 sich einen \acrfull{lofi} Prototypen zu bauen, um die Funktionsweise
-des \glqq Frosch\grqq{} Prinzips für das Treppensteigen zu testen.
+des \glqq Frosch\grqq{} Prinzips für das Treppensteigen zu testen (siehe Abbildung \ref{fig:frosch-prinzip}).
 
 Als erstes wird geprüft, ob die Idee umsetzbar ist.
 Eine Unsicherheit dabei ist der Schwerpunkt und ob das Modell kippt
@@ -139,21 +142,33 @@ dass die Treppe so bestiegen werden könnte.
 
 In einer nächsten Evaluation soll das Prinzip in einem 1:1 Prototypen veranschaulicht und realisiert werden.
 
-\image
- {img/frosch.png}
- {Treppensteigen mit dem "Frosch" prinzip}
+\begin{figure}[h]
+  \includegraphics[width=0.8\textwidth]{img/frosch.png}
+  \centering
+  \caption{Treppensteigen mit dem "Frosch" prinzip}
+  \label{fig:frosch-prinzip}
+\end{figure}
+
 
 \subsection*{Mock-Up}
- Es wird ein Mock-Up mit den ersten Massabschätzungen im Masstab 1:1 erstellt. Das Mock-Up wird aus Lego und Karton aufgebaut. Die ersten Massabschätzungen werden anhand des Datenblatts der Treppe getroffen. Mit diesem Mock-Up soll getestet werden, ob das Treppensteigen mit dem in der Nutzwertanalyse definierten Treppensteigprinzip funktioiniert. Getestet wird dieses Mock-Up auf einer selbst gebauten Holztreppe.
+ Es wird ein Mock-Up mit den ersten Massabschätzungen im Masstab 1:1 erstellt. Das Mock-Up wird aus Lego und Karton aufgebaut (siehe Abbildung \ref{fig:mockup-stufenerklimmung}). Die ersten Massabschätzungen werden anhand des Datenblatts der Treppe getroffen. Mit diesem Mock-Up soll getestet werden, ob das Treppensteigen mit dem in der Nutzwertanalyse definierten Treppensteigprinzip funktioiniert. Getestet wird dieses Mock-Up auf einer selbst gebauten Holztreppe (siehe Abbildung \ref{fig:eigenes-treppenmodell}).
  Ziel ist es dieses Mock-Up als Grundlage für einen Prototypen zu verwenden, der die Hubbewegung automatisch ausführt.
  
- \imagewidth
-   {img/modell_treppe_1.png}
-   {Eigenes Treppenmodell}
-   {0.5\textwidth}
+ \begin{figure}[H]
+  \includegraphics[width=0.5\textwidth]{img/modell_treppe_1.png}
+  \centering
+  \caption{Eigenes Treppenmodell}
+  \label{fig:eigenes-treppenmodell}
+\end{figure}
 
- \image
-   {img/stufenerklimmung.png}
-   {Mockup für die Stufenerklimmung}
+   
+\newpage
+
+\begin{figure}[H]
+  \includegraphics[width=0.8\textwidth]{img/stufenerklimmung.png}
+  \centering
+  \caption{Mockup für die Stufenerklimmung}
+  \label{fig:mockup-stufenerklimmung}
+\end{figure}
    
 \newpage

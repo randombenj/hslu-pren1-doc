@@ -1,9 +1,9 @@
 \newpage
 \section{Vorgehen}
 Es wurde beschlossen, nach SODA \cite{Wikipedia-Scrum} vorzugehen.
-SODA ist eine einfache und agile Vorgehensweise zur Entwicklung von Projekten. Dieses Vorgehensmodell wurde von der Hochschule Luzern entwickelt, um den Studenten eine Iterativ/Inkrementelle Vorgehensweise zu bieten, welche trotzdem Zeitlich begrenzt ist. Somit ist es eine Mischung aus dem Wasserfallmodell und Scrum. Scrum wird häufig in der Software Entwicklung eingesetzt, wurde aber ursprünglich aus Studien von Manufakturen wie der Autoindustrie entwickelt \cite{Wikipedia-Scrum-History}.
+SODA ist eine einfache und agile Vorgehensweise zur Entwicklung von Projekten. Dieses Vorgehensmodell wurde von der Hochschule Luzern entwickelt, um den Studenten eine iterativ/inkrementelle Vorgehensweise zu bieten, welche trotzdem zeitlich begrenzt ist. Somit ist es eine Mischung aus dem Wasserfallmodell und Scrum. Scrum wird häufig in der Software Entwicklung eingesetzt, wurde aber ursprünglich aus Studien von Manufakturen wie der Autoindustrie entwickelt \cite{Wikipedia-Scrum-History}.
 
-Da es sich in \acrshort{pren}1 nicht um ein reines Software-, sondern um
+Da es sich in \acrshort{pren1} nicht um ein reines Software-, sondern um
 ein Interdisziplinäres Projekt handelt, besteht die Gefahr, dass Aufgaben
 mit niedrigerer Priorität nicht umgesetzt werden. Aus diesem Grund ist es
 wichtig, bereits im Vorhinein mögliche Risiken zu identifizieren und deren Machbarkeit
@@ -12,9 +12,9 @@ abzuklären. Dies wurde mittels \nameref{sec:design-thinking} gemacht.
 Um zu vermeiden dass niedriger priorisierte Aufgaben nicht vernachlässigt werden,
 ist es wichtig ein gutes Backlogmanagement zu erstellen. Das heisst alle Aufgaben/Stories zu definieren (siehe \ref{tab:anforderungsliste}), zu schätzen und zu priorisieren. Damit kann bereits früh festgestellt werden, welche Aufgaben zeitlich umgesetzt werden können.
 
-Es werden wöchentliche Stand-Ups mit dem Coach und allen Teammitgliedern durchgeführt, hierbei wird besprochen, was in der Letzten Woche erreicht wurde, was für Risiken und Hindernisse bestehen (siehe \nameref{sec:risikomanagement}) und was bis zum nächsten Stand-Up erreicht werden soll.
+Es werden wöchentliche Stand-Ups mit dem Coach und allen Teammitgliedern durchgeführt, hierbei wird besprochen, was in der letzten Woche erreicht wurde, was für Risiken und Hindernisse bestehen (siehe \nameref{sec:risikomanagement}) und was bis zum nächsten Stand-Up erreicht werden soll.
 
-Als Scrum-Board wird Trello\footnote{https://trello.com/} verwendet. Mehr dazu im \nameref{sec:arbeitsjournal}.
+Als Scrum-Board wird Trello\footnote{https://trello.com/} verwendet.
 
 \subsection{Organigram}
 SODA gibt die folgenden Rollen vor:
@@ -31,7 +31,7 @@ SODA gibt die folgenden Rollen vor:
 
 \newpage
 
-Die Rollen wurden gemäss dem Organigramm in Abbildung \ref{fig:organigramm} auf das Team verteilt. Natürlich sind im Rahmen der \acrshort{pren}1 Arbeit alle Teammitglieder teil des Entwicklerteams.
+Die Rollen wurden gemäss dem Organigramm in Abbildung \ref{fig:organigramm} auf das Team verteilt. Natürlich sind im Rahmen der \acrshort{pren1} Arbeit alle Teammitglieder teil des Entwicklerteams.
 Je nach Rolle kann aber mehr oder weniger Arbeit beispielsweise für das Backlogmanagement anfallen.
 
 \begin{figure}[H]
@@ -42,13 +42,13 @@ Je nach Rolle kann aber mehr oder weniger Arbeit beispielsweise für das Backlog
 \end{figure}
 
 \subsection{Datenaustausch}
-Um Daten im Team auszutauschen und gemeinsam Dokumente zu erarbeiten, werden zwei verschiedene Cloud Plattformen verwendet. Jedes Teammitglied hat vollständigen zugriff auf beide Plattformen.
+Um Daten im Team auszutauschen und gemeinsam Dokumente zu erarbeiten, werden zwei verschiedene Cloud Plattformen verwendet. Jedes Teammitglied hat vollständigen Zugriff auf beide Plattformen.
 
 \textbf{OneDrive}\\
 Microsoft OneDrive wird verwendet, um Office 365 Dokumente zu verwalten. Dank OneDrive sind diese Dokumente versionskontrolliert und unter allen Mitgliederen synchronisiert. Dies erlaubt eine simultane Bearbeitung.
 
 \textbf{GitHub}\\
-Mit Hilfe von GitHub wird der Quellcode versionskontrolliert verwaltet. Es wurden zwei Repositories angelegt. Die Latex-Dokumentation ist unter dem Repository https://github.com/randombenj/hslu-pren1-doc erreichbar und der Quellcode unter https://github.com/randombenj/hslu-pren1.
+Mit Hilfe von GitHub wird der Quellcode versionskontrolliert verwaltet. Es wurden zwei Repositories angelegt. Die \LaTeX-Dokumentation ist unter dem Repository https://github.com/randombenj/hslu-pren1-doc erreichbar und der Quellcode unter https://github.com/randombenj/hslu-pren1.
 
 \newpage
 
@@ -83,25 +83,43 @@ Diese klärt man mithilfe von Prototypen auf die Machbarkeit.
   
 \subsection{Risikomanagement}
 \label{sec:risikomanagement}
-Das Risikomanagement wurde iterativ-inkrementell jede Woche in den Stand-Ups durchgeführt. Dazu wurde ein Excel-Template verwendet, welche als Datei dem Anhang beigelegt wird. In diesem Template wurde jedem Risiko einen Risk Score zugeteilt, welcher sich aus Eintrittshäufigkeit multipliziert mit Schadensausmass errechnet. Dieser Risk Score wurde vor und nach der definierten Prävention berechnet. Nachfolgend in der Tabelle \ref{tab:risikomanagement} werden lediglich die wichtigsten technischen Risiken und deren präventiven Massnahmen aufgelistet.
+Das Risikomanagement wurde iterativ-inkrementell jede Woche in den Stand-Ups durchgeführt. Dazu wurde ein Excel-Template verwendet, welche als Datei dem Anhang beigelegt wird. In diesem Template wurde jedem Risiko einen Risk Score zugeteilt, welcher sich aus Eintrittshäufigkeit multipliziert mit Schadensausmass errechnet. Anhand dieses Risk Scores wurde eine Risikomatrix erstellt, welche in Abbildung \ref{fig:risk-matrix} ersichtlich ist. Dieser Risk Score wurde vor und nach der definierten Prävention berechnet (siehe Abbildung \ref{fig:risk-matrix-after-measures}). Nachfolgend in der Tabelle \ref{tab:risikomanagement} werden lediglich die wichtigsten technischen Risiken und deren präventiven Massnahmen aufgelistet. 
 
 \begin{center}
 \begin{table}[H]
-    \begin{tabularx}{\textwidth}{l|X|X}
+    \begin{tabularx}{\textwidth}{|l|X|X|}
+        \hline
         \textbf{ID} & \textbf{Titel} & \textbf{Vorbeugende Massnahmen} \\ \hline
-        R6 & Hindernisse werden nicht erkannt & Möglichst früh Konzept erstellen und mithilfe eines Prototyps testen. \\
-        R8 & Roboter erfüllt 4 min Laufzeit nicht & Zeitbudget für einzelne Zustände im Gesamtablauf erstellen und in Evaluation mit einbeziehen. \\ 
-        R9 & Komponenten lassen sich nicht kombinieren & Kompatibilität der verschiedenen Komponenten in die Evaluation mit einbeziehen \\
-        R10 & Roboter kommt bei seitlicher Traversierung auf der Treppenstufe vom Kurs ab.& Orientierung auf einer Stufe in der Konzeption miteinbeziehen, früh Tests mit Prototypen durchführen.\\
-        R11 & Fortbewegungskonzept wird durch die Beschaffenheit der Treppe gestört & Bei Evaluation Untergrund miteinbeziehen. Funktionsmuster bauen bei Unsicherheit. \\
-        R12 & Der Roboter gerät bei der Hubbewegung aus dem Gleichgewicht. & Berechnung des Gewichts und des Schwerpunktes.\\
-        R14 & Anschlag bei Drehbewegung in der Nähe eines Hindernisses bei minimalem Durchgang von 400 mm. & Lösungskonzept erarbeiten oder Dimension so wählen, dass Rotation immer möglich ist. \\
-        R15 & Standfusspostition nach dem Einfahren der Ausleger nicht mehr richtig. & Ansteuerung der Motoren so justieren, dass Ausleger immer richtig eingefahren werden. \\
+        R6 & Hindernisse werden nicht erkannt & Möglichst früh Konzept erstellen und mithilfe eines Prototyps testen. \\ \hline
+        R8 & Roboter erfüllt 4 min Laufzeit nicht & Zeitbudget für einzelne Zustände im Gesamtablauf erstellen und in Evaluation mit einbeziehen. \\ \hline
+        R9 & Komponenten lassen sich nicht kombinieren & Kompatibilität der verschiedenen Komponenten in die Evaluation mit einbeziehen \\ \hline
+        R10 & Roboter kommt bei seitlicher Traversierung auf der Treppenstufe vom Kurs ab.& Orientierung auf einer Stufe in der Konzeption miteinbeziehen, früh Tests mit Prototypen durchführen.\\ \hline
+        R11 & Fortbewegungskonzept wird durch die Beschaffenheit der Treppe gestört & Bei Evaluation Untergrund miteinbeziehen. Funktionsmuster bauen bei Unsicherheit. \\ \hline
+        R12 & Der Roboter gerät bei der Hubbewegung aus dem Gleichgewicht. & Berechnung des Gewichts und des Schwerpunktes.\\ \hline
+        R15 & Anschlag bei Drehbewegung in der Nähe eines Hindernisses bei minimalem Durchgang von 400 mm. & Lösungskonzept erarbeiten oder Dimension so wählen, dass Rotation immer möglich ist. \\ \hline
+        R16 & Standfusspostition nach dem Einfahren der Ausleger nicht mehr richtig. & Ansteuerung der Motoren so justieren, dass Ausleger immer richtig eingefahren werden. \\ \hline
+        R17 & Nicht alle Aspekte bei der Berechnung der Hubbewegung miteinkalkuliert. Hubbewegung funktioniert nicht. & Genaue Berechnungen, Prinzip belegen anhand Funktionsmuster.\\ \hline
+        R18 & Hindernisse werden nicht erkannt. & Früh im PREN2 testen und Lichtverhältnisse miteinkalkulieren.\\ \hline
     \end{tabularx}
     \caption{Risikomanagement}
     \label{tab:risikomanagement}
 \end{table}
 \end{center}
+
+\begin{figure}[H]
+  \centering
+  \begin{minipage}[t]{0.45\linewidth}
+  \includegraphics[width=1.0\textwidth]{img/risikomanagement/Risks.png}
+  \caption{Risikomatrix}
+  \label{fig:risk-matrix}
+  \end{minipage} 
+  \hfill
+  \begin{minipage}[t]{0.45\linewidth}
+  \includegraphics[width=1.0\textwidth]{img/risikomanagement/RisksAfterMeasures.png}
+  \caption{Risikomatrix nach den präventiven Massnahmen}
+  \label{fig:risk-matrix-after-measures}
+  \end{minipage}
+\end{figure}
   
 \subsection{Rahmenplan}
 Wie in Abbildung \ref{fig:rahmenplan} ersichtlich, hat sich das Team entschieden, das Projekt in vier Sprints aufzuteilen. Somit bilden die drei Testate und die Schlussabgabe die Ergebnisse, welche am Ende eines Sprints vorliegen sollen.
@@ -112,6 +130,19 @@ Wie in Abbildung \ref{fig:rahmenplan} ersichtlich, hat sich das Team entschieden
   \caption{Rahmenplan des Projekts}
   \label{fig:rahmenplan}
 \end{figure}
+
+\newpage
+
+\subsection{Productbacklog}
+Als zentrales Projektmanagement Element wurde ein Productbacklog aufgesetzt. Dieser dient als Übersicht, darüber, was in den nächsten Sprints getan werden muss. Da das \acrshort{pren1} Projekt jedoch in einem klar vorgegebenen Zeitrahmen steckt, das Endresultat klar definiert und auch das Budget fixiert ist, wurden bereits zu Beginn alle vier Sprints aufgelistet und grob geplant. 
+
+\begin{figure}[H]
+  \includegraphics[width=0.95\textwidth]{img/projektmanagement/Backlog.png}
+  \centering
+  \caption{Productbacklog}
+  \label{fig:productbacklog}
+\end{figure}
+
 
 \subsection{Sprintplanung}
 Zu Beginn jedes Sprints wurde eine Sprintplanung gemacht. Dazu wurden die Backlog-Items (Epics) mit der höchsten Priorisierung in User-Storys aufgesplittet und in den Sprintbacklog übernommen. 
@@ -132,6 +163,12 @@ In der Abbildung \ref{fig:sprint-backlog-1} wird der Sprintbacklog gezeigt, welc
   \label{fig:sprint-backlog-1}
 \end{figure}
 
+\newpage
+
+\textbf{Sprintreview}\\
+Das Sprintreview befindet sich im Anhang unter dem Abschnitt Arbeitsjournal - Technologierecherche und Anforderungsliste.
+
+
 \subsubsection{Sprint 2}
 \textbf{Sprintziel}\\
 Das Ziel des Sprint 2 ist es, die verschiedenen Lösungsmöglichkeiten welche in Sprint 1 erarbeitet wurden einzugrenzen. Am Ende sollen drei mögliche Grobkonzepte stehen und ein klarer Favorit vorliegen.
@@ -147,6 +184,9 @@ In der Abbildung \ref{fig:sprint-backlog-2} wird der Sprintbacklog gezeigt, welc
   \caption{Sprint 2 - Backlog}
   \label{fig:sprint-backlog-2}
 \end{figure}
+
+\textbf{Sprintreview}\\
+Das Sprintreview befindet sich im Anhang unter dem Abschnitt Arbeitsjournal - Evaluation, Auswahl der optimalen Lösungskombination(en).
 
 \subsubsection{Sprint 3}
 \textbf{Sprintziel}\\
@@ -164,9 +204,12 @@ In der Abbildung \ref{fig:sprint-backlog-3} wird der Sprintbacklog gezeigt, welc
   \label{fig:sprint-backlog-3}
 \end{figure}
 
+\textbf{Sprintreview}\\
+Das Sprintreview befindet sich im Anhang unter dem Abschnitt Arbeitsjournal - Freigabe des Gesamtkonzeptes, Dokumentation zu 80\% erstellt.
+
 \subsubsection{Sprint 4}
 \textbf{Sprintziel}\\
-Das Ziel des Sprint 4 ist die Fertige Dokumentation gemäss Kriterien.
+Das Ziel des Sprint 4 ist die fertige Dokumentation gemäss Kriterien.
 
 \textbf{Risiko-Update}\\
 Die Risiken R1 und R3 sind weggefallen, da die Dokumentation zu 80\% fertiggestellt und die Evaluation abgeschlossen ist. Neu hinzugekommen ist, dass sich der Roboter beim Drehen auf der Treppe in einem Hinderniss einhakt, wenn der Durchgang die minimal mögliche Breite von 400 mm hat (R14).
@@ -174,100 +217,3 @@ Die Risiken R1 und R3 sind weggefallen, da die Dokumentation zu 80\% fertiggeste
 \textbf{Sprintbacklog}\\
 Für den Sprint 4 wurde kein Sprintbacklog erstellt. Da es im Backlog keine weiteren Items mehr gab.
 
-\section{Arbeitsjournal}
-Dieses Kapitel beinhaltet eine Übersicht der Sprints und welche Tätigkeiten 
-in diesen gemacht wurden.
-
-\subsection*{Technologierecherche und Anforderungsliste}
-\workday
-    {1}
-    {\ok Meilenstein 1 Erledigt. Alle Tasks abgeschlossen.}
-    {
-      Es wurde sich intensiv mit der Technologierecherche auseinandergesetzt.
-      Dabei wurde versucht, wie im Design Thinking Prozess beschrieben, so breit wie möglich
-      zu bleiben.
-    }
-    {
-      Das Testat 1 konnte erfolgreich abgegeben werden mit verschiedenen Technologierecherchen in
-      allen Bereichen.
-    }
-    \begin{figure}[H]
-  \centering
-  \begin{minipage}[t]{0.45\linewidth}
-  \includegraphics[width=0.7\textwidth]{img/Trello/Trello-Bord_1_Nr1.PNG}
-  \caption{Scrum Board des Sprints 1, Teil 1}
-  \label{Scrum Board 2.1}
-  \end{minipage} 
-  \hfill
-  \begin{minipage}[t]{0.45\linewidth}
-  \includegraphics[width=0.7\textwidth]{img/Trello/Trello-Bord_1_Nr2.PNG}
-  \caption{Scrum Board des Sprints 1, Teil 2}
-  \label{Scrum Board 2.2}
-  \end{minipage}
-\end{figure}
-
-\subsection*{Evaluation, Auswahl der optimalen Lösungskombination(en)}
-\workday
-    {2}
-    {\ok Meilenstein 2 Erledigt. Bereits mit Meilenstein 3 angefangen.}
-    {
-      Im Meilenstein 2 wurden aus der Technologierecherche drei Lösungskonzepte erstellt
-      und anschliessend evaluiert. Dabei wird der einfachste Ansatz weiterverfolgt. 
-      Ganz nach dem Motto ``Keep it simple and stupid''.
-    }
-    {
-      Aufgrund der zügigen Fortschritte bezüglich der ersten Evaluation, konnte rasch zur Evaluation der Teilkonzepte fortgeschritten werden.
-    }
-
-    
-    \begin{figure}[H]
-  \centering
-  \begin{minipage}[t]{0.45\linewidth}
-  \includegraphics[width=0.7\textwidth]{img/Trello/Trello-Bord_2_Nr1.PNG}
-  \caption{Scrum Board des Sprints 2, Teil 1}
-  \label{Scrum Board 2.1}
-  \end{minipage} 
-  \hfill
-  \begin{minipage}[t]{0.45\linewidth}
-  \includegraphics[width=0.7\textwidth]{img/Trello/Trello-Bord_2_Nr2.PNG}
-  \caption{Scrum Board des Sprints 2, Teil 2}
-  \label{Scrum Board 2.2}
-  \end{minipage}
-\end{figure}
-    
-    
-    
-    
-    
-    
-    
-    
-    
-\subsection*{Freigabe des Gesamtkonzeptes, Dokumentation zu 80\% erstellt}
-\workday
-    {3}
-    {\ok Meilenstein 3 Erledigt.}
-    {
-      Die Dokumentation wurde soweit zu 80\% fertiggestellt. 
-    }
-    {
-      Die Ideen konnten mithilfe der Funktionsmuster überprüft werden und geben einen verlässlichen Eindruck, wie der Roboter umgesetzt werden kann.
-    }
-
-    
-    
-        \begin{figure}[H]
-  \centering
-  \begin{minipage}[t]{0.45\linewidth}
-  \includegraphics[width=0.7\textwidth]{img/Trello/Trello-Bord_3_Nr1.PNG}
-  \caption{Scrum Board des Sprints 3, Teil 1}
-  \label{Scrum Board 3.1}
-  \end{minipage} 
-  \hfill
-  \begin{minipage}[t]{0.45\linewidth}
-  \includegraphics[width=0.7\textwidth]{img/Trello/Trello-Bord_3_Nr2.PNG}
-  \caption{Scrum Board des Sprints 3, Teil 2}
-  \label{Scrum Board 3.2}
-  \end{minipage}
-\end{figure}
-   

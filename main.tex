@@ -1,19 +1,38 @@
-
 \documentclass[oneside]{modern}
 \title{Produktentwicklung 1}
 \author{
-\begin{tabular}{ l l }
-  Burch Sven & <sven.burch@stud.hslu.ch> \\
-  Fassbind Benjamin & <benjamin.fassbind@stud.hslu.ch \\
-  Jacob Yves & <yves.jacob@stud.hslu.ch> \\
-  Meier Boas & <boas.meier@stud.hslu.ch> \\
-  Paradiso Simone & <simone.paradiso@stud.hslu.ch> \\
-  Roos Yannick & <yannick.roos@stud.hslu.ch>
+\begin{tabular}{ l l l}
+  \textbf{Gruppe 5} && \\
+  Burch Sven & <sven.burch@stud.hslu.ch> & Maschinentechnik\\
+  Fassbind Benjamin & <benjamin.fassbind@stud.hslu.ch> & Informatik \\
+  Jacob Yves & <yves.jacob@stud.hslu.ch> & Elektrotechnik\\
+  Meier Boas & <boas.meier@stud.hslu.ch> & Informatik\\
+  Paradiso Simone & <simone.paradiso@stud.hslu.ch> & Elektrotechnik \\
+  Roos Yannick & <yannick.roos@stud.hslu.ch> & Elektrotechnik \\
+  \\
+  \textbf{Betreuender Dozent} && \\
+  Sollberger Peter & <peter.sollberger@hslu.ch> & Informatik \\
+  \\
+  \\
+  \\
+  TA.BA\_PREN1.HS2001 &&\\
 \end{tabular}
 }
-\date{\today}
 
 
+\newcommand{\sectionnumbering}[1]{%
+  \setcounter{section}{0}%
+   \renewcommand{\thesection}{\csname #1\endcsname{section}}}
+
+\usepackage{etoc}
+\etocsettocstyle
+    {\section *{\contentsname
+%                \@mkboth {\MakeUppercase \contentsname}
+%                         {\MakeUppercase \contentsname}
+         }
+         }
+    {}   
+    
 \begin{document}
 
    % magic * chapter starts at 1 :) 
@@ -32,12 +51,16 @@
 
   \firstpage
     {Autonomer Baugerüst-Roboter}
-    {Hochschule Luzern, Gruppe 5}
+    {Hochschule Luzern - Technik und Architektur}
     {\theauthor}
 
+\subfile{parts/Redlichkeiterklärung.tex}
   \subfile{parts/management_summary.tex}
   
   \newpage
+  \etocdepthtag.toc{mtchapter}
+  \etocsettagdepth{mtchapter}{subsection}
+  \etocsettagdepth{mtappendix}{none}
   \addtableofcontents
   
   \newpage
@@ -73,8 +96,12 @@
   \printbibliography[
     heading=subbibliography
   ]
-  
-\subfile{parts/anhang}
 
+  % Anhang
+  \addcontentsline{toc}
+    {section}
+    {Anhang}
+    
+  \subfile{parts/anhang}
 
 \end{document}

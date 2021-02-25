@@ -84,7 +84,6 @@
 }
 
 %\RequirePackage{xtab}
-
 \RequirePackage{wrapfig}
 \RequirePackage[backend=bibtex]{biblatex}
   \addbibresource{references.bib}
@@ -218,9 +217,11 @@
 % remove numbering in section in the rightmark
 \renewcommand{\sectionmark}[1]{\markright{#1}{}}
 
-\rhead{
-  \bf\small\nouppercase\rightmark
-}
+\lhead{\textbf{Hochschule Luzern} \newline 
+PREN 1}
+%\rhead{
+%  \bf\small\nouppercase\rightmark
+%}
 
 % The footer shows the title, the author and the page [page]/[total pages]
 \lfoot{
@@ -422,7 +423,7 @@
 
   \thispagestyle{firststyle}
   \null
-  \vspace{6cm}
+  \vspace{4cm}
 
   {\Huge\sf\bfseries\doctitle}
 
@@ -430,7 +431,7 @@
 
   {\huge\it{#1}\newline}
 
-  {\LARGE\sf{#2}\newline}
+  {\Large\sf{#2}\newline}
 
   {\normalsize{#3}\newline}
 
@@ -651,14 +652,15 @@
 
   \newpage
   %  Glossar
-  \addcontentsline{toc}
-    {section}
-    {Glossar}
+  %\addcontentsline{toc}
+   %{section}
+    %{Glossar}
 
-  \printglossary[
-    style=altlist,
-    title=Glossar
-  ]
+
+ % \printglossary[
+  %  style=altlist,
+   % title=Glossar
+ % ]
 }
 
 % ------------------------------------------------------------------------------
@@ -837,6 +839,5 @@
     },
     clip
   ]{#1}
-
 }
 

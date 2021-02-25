@@ -1,10 +1,10 @@
 \newpage
 \section{Funktionsmuster}
 In diesem Abschnitt werden für gewisse Teilfunktionen des Roboters Funktionsmuster oder Prototypen erstellt. Damit können die Bewegungsabläufe und die technische Machbarkeit veranschaulicht werden. Ebenfalls können Probleme frühzeitig identifiziert und behoben werden.
-\subsection{Piktogrammerkennung mit CNN}
+\subsection{Piktogrammerkennung mit \acrshort{cnn}}
 \label{sec:piktogrammerkennung-mit-cnn}
 % vereinfachen ("dobbelisecher")
-Das Ziel dieses Funktionsmusters ist es in erster Linie, Erfahrung zu sammeln mit OpenCV, Keras, TensorFlow und der Piktogrammerkennung mit einem Convolutional Neural Network (CNN). Als CNN wurde eine vereinfachte Version der VGGNet Architektur gewählt.
+Das Ziel dieses Funktionsmusters ist es in erster Linie, Erfahrung zu sammeln mit OpenCV, Keras, TensorFlow und der Piktogrammerkennung mit einem \acrfull{cnn}. Als \acrshort{cnn} wurde eine vereinfachte Version der VGGNet Architektur gewählt.
 Der Programmcode der Pythonscripts ist auf Github\footnote{https://github.com/randombenj/hslu-pren1/tree/master/pictogram\_detection} wie auch in Anhang zu finden.
 
 \subsubsection{Trainingsdaten}
@@ -26,10 +26,10 @@ Das Datenset besteht aus 500 Bildern über fünf Kategorien.
     \item Taco Piktogramm (100 Bilder)
  \end{itemize}
  
-Die Trainingsdaten sind auf die Bilder in der Aufgabenstellung beschränkt. Um das Datenset zu vergrössern werden aus den original Piktogrammen mithilfe von Dataaugmentation viele leicht abgeänderte Versionen erstellt. Das Ziel dieses CNN ist, dass es anhand dieser Trainingsdaten die Piktogramme in der realen Welt korrekt klassifizieren kann. %für nicht informatiker verständlich machen
+Die Trainingsdaten sind auf die Bilder in der Aufgabenstellung beschränkt. Um das Datenset zu vergrössern werden aus den original Piktogrammen mithilfe von Dataaugmentation viele leicht abgeänderte Versionen erstellt. Das Ziel dieses \acrshort{cnn} ist, dass es anhand dieser Trainingsdaten die Piktogramme in der realen Welt korrekt klassifizieren kann. %für nicht informatiker verständlich machen
 
 \subsubsection{Trainingsergebnisse}
-Wie im Plot (Abbildung \ref{fig:trainingsergebnisse}) ersichtlich, wurde das CNN über 100 Epochs traniert und erreichte:
+Wie im Plot (Abbildung \ref{fig:trainingsergebnisse}) ersichtlich, wurde das \acrshort{cnn} über 100 Epochs traniert und erreichte:
 \begin{itemize}
     \item 99.9\% multi-label Klassifikationsgenauigkeit mit den Trainingsdaten (train\_acc)
     \item 98.9\% multi-label Klassifikationsgenauigkeit mit den Testdaten (val\_acc)
@@ -43,7 +43,7 @@ Wie im Plot (Abbildung \ref{fig:trainingsergebnisse}) ersichtlich, wurde das CNN
 \end{figure} 
    
 \subsubsection{Tests}
-Um die Effektivität des Trainings zu testen werden verschiedenen Testbilder an das CNN übergeben. Das Diagramm kann die Originalbilder mit weissem Hintergrund voneinander unterscheiden, wie in der Abbildung \ref{fig:erfolgreiche-klassifikation-mit-cnn-1} und \ref{fig:erfolgreiche-klassifikation-mit-cnn-2} ersichtlich ist. Sobald sich jedoch eine Umgebung im Hintergrund des Bildes befindet, werden die Klassifizierungen sehr unpräzise. Die Abbildung \ref{fig:fehlerhafte-klassifikation-mit-cnn-1} zeigt eine fehlerhafte Klassifizierung.
+Um die Effektivität des Trainings zu testen werden verschiedenen Testbilder an das \acrshort{cnn} übergeben. Das Diagramm kann die Originalbilder mit weissem Hintergrund voneinander unterscheiden, wie in der Abbildung \ref{fig:erfolgreiche-klassifikation-mit-cnn-1} und \ref{fig:erfolgreiche-klassifikation-mit-cnn-2} ersichtlich ist. Sobald sich jedoch eine Umgebung im Hintergrund des Bildes befindet, werden die Klassifizierungen sehr unpräzise. Die Abbildung \ref{fig:fehlerhafte-klassifikation-mit-cnn-1} zeigt eine fehlerhafte Klassifizierung.
 
 \begin{figure}[H]
   \includegraphics[width=1.0\textwidth]{img/piktogrammerkennung/collageCNN.PNG}
@@ -68,13 +68,13 @@ Um die Effektivität des Trainings zu testen werden verschiedenen Testbilder an 
 \end{figure}
 
 \subsubsection{Fazit}
-Dieses Funktionsmuster hat gezeigt, dass die Piktogramme bereits mit wenigen und simplen Testdaten mit einer sehr hohen Wahrscheinlichkeit korrekt klassifiziert werden. Vorausgesetzt, die Piktogramme sind mit schwarz auf weissem Hintergrund abgebildet und es befindet sich sonst nichts im Hintergrund. Der Ansatz, die Piktogramme mithilfe eines CNN mit einer vereinfachten VGGNet-Architektur zu erkennen, könnte also weiter verfolgt werden.  
+Dieses Funktionsmuster hat gezeigt, dass die Piktogramme bereits mit wenigen und simplen Testdaten mit einer sehr hohen Wahrscheinlichkeit korrekt klassifiziert werden. Vorausgesetzt, die Piktogramme sind mit schwarz auf weissem Hintergrund abgebildet und es befindet sich sonst nichts im Hintergrund. Der Ansatz, die Piktogramme mithilfe eines \acrshort{cnn} mit einer vereinfachten VGGNet-Architektur zu erkennen, könnte also weiter verfolgt werden.  
 
 Da die Piktogramme in der Realität jedoch nicht einfach schwarz auf weiss und ohne Hintergrundumgebung vorzufinden sind, könnte man für eine korrekt Identifizierung folgende Ansätze weiterverfolgen:
 \begin{itemize}
     \item Mehr Trainingsdaten
     \item Breiter diversivizierte Trainingsdaten (z.B. mit passendem Hintergrund)
-    \item Input an den Traingsdaten anpassen durch Herausfiltern der Region of interest (ROI)
+    \item Input an den Trainigsdaten anpassen durch Herausfiltern der \acrfull{roi}
     \item Anderes deep learning Modell verwenden
  \end{itemize}
  
@@ -114,9 +114,9 @@ Code nicht besonders gut ist. Dies ist dementsprechend keine Option um
 zuverlässig Hindernisse zu erkennen.
 
 Um die Resultate zu verbessern, sollten unnötige Informationen weggelassen werden.
-Unter der Annahme dass wir es bereits mit der fertigen Treppe zu tun haben
+Unter der Annahme, dass wir es bereits mit der fertigen Treppe zu tun haben
 und uns zuverlässig immer an der gleichen Stelle vor der Treppe
-aufstellen können, kann man bestimmte Ausschnitte aus dem Bild herausschneiden
+aufstellen können, kann man bestimmte Ausschnitte aus dem Bild herausschneiden,
 welche für die Hinderniserkennung relevant sind.
 
 Unter der Annahme, dass sich der Roboter an immer genau der gleichen stelle vor der Treppe positionieren kann,
@@ -133,7 +133,7 @@ des Roboters, die Resultate sehr ungenau werden.
 Zusätzlich ist wie auf Abbildung \ref{fig:extracted-stairs} zu erkennen ein Ziegelstein über zwei Treppenstufen ragend nicht richtig zugeordnet werden kann.
 
 Für eine zuverlässige Hinderniserkennung auf der Treppe muss also auf eine Objekterkennungmethode mit beispielsweise einer 
-Tiny-YOLO \cite{YOLOv3} Convolutional Neural Network (CNN) Architektur zurückgegriffen werden.
+Tiny-\acrshort{yolo} \cite{YOLOv3} \acrfull{cnn} Architektur zurückgegriffen werden.
 
 \subsection{Orientierung auf der Treppenstufe}
 \label{sec:orientierung-auf-treppenstufe-funktionsmuster}
@@ -175,7 +175,7 @@ Zum anderen wird Gebrauch vom Thresholding Algorithmus\cite{OpenCV-Threshold} ge
   
 \newpage
 \subsubsection{Zeitmessung}
-Um ein Gefühl für die Laufzeit solcher Bildverarbeitungen und für die Laufzeit dieses Funktionsmusters zu entwickeln, werden zehn Zeitmessungen erstellt (Tabelle \ref{tab:zeitmessung-bildverarbeitung}. Diese werden auf einem Microsoft Surface Book 2 durchgeführt. Die effektive Laufzeit auf dem Zielsystem (Raspberry Pi) kann also stark variieren.
+Um ein Gefühl für die Laufzeit solcher Bildverarbeitungen und für die Laufzeit dieses Funktionsmusters zu entwickeln, werden zehn Zeitmessungen erstellt (Tabelle \ref{tab:zeitmessung-bildverarbeitung}). Diese werden auf einem Microsoft Surface Book 2 durchgeführt. Die effektive Laufzeit auf dem Zielsystem (Raspberry Pi) kann also stark variieren.
 
 \begin{center}
 \begin{table}[H]
@@ -198,12 +198,12 @@ Es ist noch nicht klar, welcher Algorithmus besser geeignet ist. Es wäre allenf
 
 \newpage
 \subsection{Treppensteigen Prototyp 1}
-Das Lego-Mock-Up, das erstellt wurde, um die Hubbewegungen von Hand simulieren zu können, soll dazu verwendet werden, die Hubbewegungen zu automatisieren. Es wird nur eine Seite der Treppensteigkomponenten aufgebaut. 
+Das Lego-Mock-Up (siehe Anhang, Zweite Evaluation, Mock-Up), das erstellt wurde, um die Hubbewegungen von Hand simulieren zu können, soll dazu verwendet werden, die Hubbewegungen zu automatisieren. Es wurde nur eine Seite der Treppensteigkomponenten aufgebaut. 
 
-Der erste Prototyp, welcher in Abbildung \ref{fig:prototyp-treppensteigen} gezeigt wird, diente dazu das Funktionsprinzip zu überprüfen. Es muss überprüft werden, ob die Standfüsse und die Verbindungsleisten unabhängig mit zwei Motoren gedreht werden können. 
+Der erste Prototyp, welcher in Abbildung \ref{fig:prototyp-treppensteigen} gezeigt wird, diente dazu das Funktionsprinzip zu überprüfen. Es wurde überprüft, ob die Standfüsse und die Verbindungsleisten unabhängig mit zwei Motoren gedreht werden können. 
 
 \subsubsection{Mechanische Komponenten}
-Das Lego-Mock-Up wird für den Prototypenbau verkleinert, da der eingekaufte Modelbauzahnriemen nicht ganz den ersten Massabschätzungen entsprach. Die Zahnriemenräder, welche die Abbildung \ref{fig:3d-gedrucktes-zahnriemenrad} veranschaulicht, werden selber 3D-gedruckt. Das Antriebsrad konnte so direkt mit einem Zahnrad kombiniert werden. Auch das Antriebsrad kann direkt mit einer Legowelle gedruckt werden. Der Grundkörper, die Standfüsse und die Verbindungsleisten werden aus Legotechnik aufgebaut.\\
+Das Lego-Mock-Up wurde für den Prototypenbau verkleinert, da der eingekaufte Modelbauzahnriemen nicht ganz den ersten Massabschätzungen entsprach. Die Zahnriemenräder, welche die Abbildung \ref{fig:3d-gedrucktes-zahnriemenrad} veranschaulicht, werden selber 3D-gedruckt. Das Antriebsrad konnte so direkt mit einem Zahnrad kombiniert werden. Auch das Antriebsrad kann direkt mit einer Legowelle gedruckt werden. Der Grundkörper, die Standfüsse und die Verbindungsleisten wurden aus Legotechnik aufgebaut.\\
 
 \begin{figure}[H]
   \includegraphics[width=0.6\textwidth]{img/Zahnrad gedruckt.JPG}
@@ -220,7 +220,7 @@ Das Lego-Mock-Up wird für den Prototypenbau verkleinert, da der eingekaufte Mod
 \end{figure}
 
 \subsubsection{Elektrische Komponenten}
-Um die Bewegung der Arme ausführen zu können, werden zwei Getriebemotoren verwendet. Diese Motoren werden durch eine H-Brücke angesteuert. Die Ansteuerung der H-Brücken übernimmt ein Raspberry Pi 4.
+Um die Bewegung der Ausleger ausführen zu können, wurden zwei Getriebemotoren verwendet. Diese Motoren werden durch eine H-Brücke angesteuert. Die Ansteuerung der H-Brücken übernimmt ein Raspberry Pi 4.
 
 \begin{figure}[H]
   \includegraphics[width=\textwidth]{img/Funktionsmuster Treppensteigen/GUI.png}
@@ -235,7 +235,7 @@ Um die Geschwindigkeit der Motoren individuell anpassen zu können, generiert de
 Des Weiteren hat man die Möglichkeit auf dem GUI die Drehrichtung der einzelnen Motoren nach links und nach rechts zu wählen, sowie einzeln zu stoppen.
 
 \subsubsection{Test}
-Es wird geprüft, ob sich der Standfuss mit dem Zahnriemen drehen lässt und ob mit dem zweiten Motor die Verbindungsleiste gedreht werden kann. Diese Versuche werden zuerst einzeln gemacht, um die jeweilige Funktion zu testen. Zum Schluss wird noch versucht, mit der Verbindungsleiste eine Umdrehung zu machen und dabei den Standfuss horizontal zu halten. Die Abbildung \ref{fig:test-prototyp-treppensteigen} zeigt den Prototypen während den Tests.
+Es wurde geprüft, ob sich der Standfuss mit dem Zahnriemen drehen lässt und ob mit dem zweiten Motor die Verbindungsleiste gedreht werden kann. Diese Versuche wurden zuerst einzeln gemacht, um die jeweilige Funktion zu testen. Zum Schluss wurde noch versucht, mit der Verbindungsleiste eine Umdrehung zu machen und dabei den Standfuss horizontal zu halten. Die Abbildung \ref{fig:test-prototyp-treppensteigen} zeigt den Prototypen während den Tests.
 
 \begin{figure}[H]
   \includegraphics[width=0.8\textwidth]{img/Testversuch.png}
@@ -254,7 +254,7 @@ Der Bau des Prototypen für das Treppensteigen war wichtig und hat geholfen das 
 \newpage
 
 \subsection{Treppensteigen Prototyp 2}
-Da mit dem ersten Prototypen nur das Funktionsprinzip überprüft werden konnte, brauchte es einen zweiten Prototypen, um die erste Hubbewegung zu simulieren, da sie die wichtigste Hubbewegung beim besteigen der Treppe ist. Es gilt zu überprüfen, ob die erste Hubbewegung überhaupt machbar ist. Der zweite Prototyp ist in Abbildung \ref{fig:prototyp-2-treppensteigen} ersichtlich.
+Da mit dem ersten Prototypen nur das Funktionsprinzip überprüft werden konnte, brauchte es einen zweiten Prototypen, um die erste Hubbewegung zu simulieren, da sie die wichtigste Hubbewegung beim Besteigen der Treppe ist. Es galt zu überprüfen, ob die erste Hubbewegung überhaupt machbar ist. Der zweite Prototyp ist in Abbildung \ref{fig:prototyp-2-treppensteigen} ersichtlich.
 
 \begin{figure}[H]
   \includegraphics[width=0.8\textwidth]{img/Test 1. Hub.png}
@@ -264,7 +264,7 @@ Da mit dem ersten Prototypen nur das Funktionsprinzip überprüft werden konnte,
 \end{figure}
 
 \subsubsection{Fazit}
-Es konnte gezeigt werden, dass die erste Hubbewegung umsetzbar ist. Die Bewegung funktioniert mit dem Zahnriemen als Kraftübertragung.
+Es konnte gezeigt werden, dass die erste Hubbewegung umsetzbar ist. Die Bewegung funktioniert mit dem Zahnriemen als Kraftübertragung, wenn verhindert wird, dass sich die Ausleger drehen können.
 
 \newpage
 \subsection{Fortbewegung Prototyp}

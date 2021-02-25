@@ -1,8 +1,8 @@
-\section*{Berechnungen}
+\section{Berechnungen}
 
 \textbf{Abmasse}
 
-Anhand der vorgegebenen Treppe werden erste Massabschätzungen gemacht. Dabei werden die Tritthöhe und die Tritttiefe berücksichtigt.
+Anhand der vorgegebenen Treppe wurden erste Massabschätzungen gemacht. Dabei werden die Tritthöhe und die Tritttiefe berücksichtigt.
 
 \begin{figure}[H]
   \includegraphics[width=1
@@ -18,22 +18,34 @@ Anhand der vorgegebenen Treppe werden erste Massabschätzungen gemacht. Dabei we
 Für die Masse und den Schwerpunkt des Grundkörpers wurde eine Berechnung mit den Hauptkomponenten gemacht. Dabei wurden Halterungen, Sensoren, Kameras und Normteile wie Schrauben oder Passfedern nicht berücksichtigt.
 
 Masse Grundplatte: 0.15 kg
-Masse Welle 1: 0.6 kg
-Masse Welle 3: 0.3 kg
-Masse Motor 1: 0.3 kg
-Masse Motor 2: 0.3 kg
-Masse Akku: 0.074 kg
-Zusatzmasse: 0.95 kg
 
-Gesamt Masse Grundkörper: 2.9 kg
+Masse Welle 1: 0.6 kg
+
+Masse Welle 3: 0.3 kg
+
+Masse Motor 1: 0.3 kg
+
+Masse Motor 2: 0.3 kg
+
+Masse Akku: 0.074 kg
+
+Zusatzmasse: 0.95 kg\\
+
+Gesamt Masse Grundkörper: 2.9 kg\\
 
 Schwerpunkt Grundplatte: 100 mm
+
 Schwerpunkt Welle 1: 50 mm
+
 Schwerpunkt Welle 3: 79.4 mm
-Schwerpunkt Motor 1(ink. Halterung und Abtriebszahnrad): 79.4 mm
-Schwerpunkt Motor 2(ink. Halterung und Abtriebszahnrad): 18 mm
+
+Schwerpunkt Motor 1: 79.4 mm
+
+Schwerpunkt Motor 2: 18 mm
+
 Schwerpunkt Akku: 180 mm
-Schwerpunkt Zusatzmasse: 180 mm
+
+Schwerpunkt Zusatzmasse: 180 mm\\
 
 Schwerpunkt Grundkörper: 105.2 mm
 
@@ -44,9 +56,12 @@ Schwerpunkt Grundkörper: 105.2 mm
   \caption{Grundkörper}
 \end{figure}
 
+\newpage
+
 \textbf{Standfüsse}
 
 Masse Standfuss: 0.51 kg
+
 Schwerpunkt Standfuss: 184.8 mm
 
 \begin{figure}[H]
@@ -60,8 +75,9 @@ Schwerpunkt Standfuss: 184.8 mm
 
 Der Schwerpunkt der Verbindungsleisten wurde mittig gesetzt, um die Schwerpunktsberechnung zu vereinfachen.
 
-Masse Verbindungsleisten: 0.18 kg
-Schwerpunkt Verbindungsleisten: 140 mm
+Masse Verbindungsleiste: 0.19 kg
+
+Schwerpunkt Verbindungsleiste: 140 mm
 
 \begin{figure}[H]
   \includegraphics[width=0.8
@@ -70,26 +86,28 @@ Schwerpunkt Verbindungsleisten: 140 mm
   \caption{Verbindungsleiste}
 \end{figure}
 
+\newpage
+
 \textbf{Notwendige Momente bei den Hubbewegungen}
 
-Die Momente, die gebraucht werden, konnten mit den ersten Abmassen, Massen und Schwerpunkten der komponenten berechnet werden und dienen als Grundlage zur Auswahl der Motoren.
+Die Momente, die gebraucht werden, konnten mit den ersten Abmassen, Massen und Schwerpunkten der Komponenten berechnet werden und dienen als Grundlage zur Auswahl der Motoren.
 
-\textbf{Momente bei den Hubbewegungen:}
+\textbf{Momente bei den Hubbewegungen:} (G:Grundkörper, S:Standfuss, L:Verbindungsleiste)
 
 \textbf{1. Hubbewegung:}
 
 Drehachse 1: Moment zum horizontalen Halten des Grundkörpers
 \begin{align*}
-    M_{Achse 1} &= F_{GG} * 0.0552\ m \\
-    &= m_{GG} * g * 0.0552\ m \\
+    M_{Drehachse 1} &= F_{GG} * 0.0552\ m \\
+    &= m_{G} * g * 0.0552\ m \\
     &= 2.9\ kg * 9.81\ m/s^2\ * 0.0552\ m \\
     &= \underline{\underline{1.6\ Nm}}
 \end{align*}
 
 Drehachse 2: grösstes Moment am Anfang, in Ausgangsstellung
 \begin{align*}
-    M_{Achse 2} &= F_{GL} * 0.115\ m + F_{GG} * 0.1748\ m \\
-    &= g * (m_{GL} * 0.115\ m + m_{GG} * 0.1748\ m \\
+    M_{Drehachse 2} &= F_{G2L} * 0.115\ m + F_{GG} * 0.1748\ m \\
+    &= g * (m_{2L} * 0.115\ m + m_{G} * 0.1748)\ m \\
     &= 9.81\ m/s^2\ * (0.38\ kg * 0.115\ m + 2.9\ kg * 0.1748\ m) \\
     &= \underline{\underline{5.4\ Nm}}
 \end{align*}
@@ -98,24 +116,24 @@ Drehachse 2: grösstes Moment am Anfang, in Ausgangsstellung
 
 Drehachse 1: grösstes Moment, wenn alle Teile horizontal
 \begin{align*}
-    M_{Achse 1} &= F_{GS} * 0.2852\ m + F_{GL} * 0.115\ m \\
-    &= g * (m_{GS} * 0.2852\ m + m_{GL} * 0.115\ m) \\
-    &= 9.81\ m/s^2 * (1.2\ kg * 0.2852\ m + 0.38\ kg * 0.115\ m) \\
-    &= \underline{\underline{3.8\ Nm}}
+    M_{Drehachse 1} &= F_{G2S} * 0.2852\ m + F_{G2L} * 0.115\ m \\
+    &= g * (m_{2S} * 0.2852\ m + m_{2L} * 0.115\ m) \\
+    &= 9.81\ m/s^2 * (1.02\ kg * 0.2852\ m + 0.38\ kg * 0.115\ m) \\
+    &= \underline{\underline{3.3\ Nm}}
 \end{align*}
 
 Drehachse 2: grösstes Moment, wenn Standfüsse horizontal
 \begin{align*}
-    M_{Achse 2} &= F_{GS} * 0.0552\ m \\
-    &= m_{GS} * g * 0.0552\ m \\
+    M_{Drehachse 2} &= F_{G2S} * 0.0552\ m \\
+    &= m_{2S} * g * 0.0552\ m \\
     &= 1.02\ kg * 9.81\ m/s^2 * 0.0552\ m \\
     &=\underline{\underline{0.6\ Nm}}
 \end{align*}
 
 Motor 1 liefert das Moment, dass in der 2. Drehachse wirkt und Motor 2 liefert das Moment, dass in der 1. Drehachse wirkt.\\
 \\
-M$_{erforderlich}$ Achse 1: 2.4 Nm\\
+M$_{erforderlich}$ Drehachse 1: 3.3 Nm\\
 
-M$_{erforderlich}$ Achse 2: 5.4 Nm verteilt auf zwei Seiten
+M$_{erforderlich}$ Drehachse 2: 5.4 Nm verteilt auf zwei Seiten
 
-M$_{erforderlich}$ Achse 2 pro Seite: 2.7 Nm
+M$_{erforderlich}$ Drehachse 2 pro Seite: 2.7 Nm
